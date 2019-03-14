@@ -1,0 +1,58 @@
+{
+    "sensor": {
+        "title": "text_sensor_title",
+        "intro": "text_sensor_intro",
+        "codeLink": "https://github.com/ApolloAuto/apollo",
+        "image": "/static/images/9@2x.png",
+        "image_g": "/static/images/sensor.gif",
+        "link": "data-sensor demostration-user guide",
+        "download": "sensor",
+        "button": "text_source_code",
+        "size": "12.1GB"
+    },
+    "calibrator": {
+        "title": "text_calibrator_title",
+        "intro": "text_calibrator_intro",
+        "codeLink": "https://console.bce.baidu.com/apollo/calibrator/index/list",
+        "image": "/static/images/10@2x.png",
+        "image_g": "/static/images/calibrator.gif",
+        "link": "celebration-intro",
+        "download": "demo-calibrator-data-apollo-1.5.bag",
+        "button": "text_visit_calibration",
+        "size": "560MB"
+    },
+    "e2e": {
+        "title": "text_e2e_title",
+        "intro": "text_e2e_intro",
+        "codeLink": "https://github.com/ApolloAuto/apollo/tree/master/modules/e2e",
+        "image": "/static/images/11@2x.png",
+        "image_g": "/static/images/road_hackers.gif",
+        "link": "end-to end intro",
+        "download": "e2e",
+        "button": "text_source_code",
+        "size": "156GB"
+    },
+    "localization": {
+        "title": "text_localization_title",
+        "intro": "text_localization_intro",
+        "codeLink": "https://github.com/ApolloAuto/apollo/tree/master/modules/elo",
+        "image": "/static/images/12@2x.png",
+        "image_g": "/static/images/localization.gif",
+        "link": "EGO Localization",
+        "download": "demo-localization-data-apollo-1.5.zip",
+        "button": "text_source_code",
+        "size": "237MB"
+    },
+    "multisensor": {
+        "title": "text_multisensor_title",
+        "intro": "text_multisensor_intro",
+        "codeLink": "https://github.com/ApolloAuto/apollo/tree/master/modules/localization/msf",
+        "image": "/static/images/13@2x.png",
+        "image_g": "/static/images/multisensor.gif",
+        "link": "sensor data",
+        "download": "demo-multi_sensor_fusion_localization-data-apollo-2.0.tar.gz",
+        "button": "text_source_code",
+        "size": "4.0GB",
+        "noshow": true
+    }
+}

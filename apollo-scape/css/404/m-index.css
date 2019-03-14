@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    background-color: #f7f7f7;
+}
+.apollo-scape-404-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+    text-align: center;
+}
+.apollo-scape-404 {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: inline-block;
+    width: 720px;
+    height: 375px;
+    background-image: url('/public/img/404/404@2x.png');
+    background-size: 720px 375px;
+}
+.apollo-scape-404 p {
+    margin: 0;
+    font-size: 30px;
+    color: #999;
+}
+.first-text {
+    padding-top: 400px;
+}

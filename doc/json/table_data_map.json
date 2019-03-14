@@ -1,0 +1,88 @@
+{
+    "scene": [
+        {
+            "size": "749.79KB",
+            "name": "annotation-apollo_scape_label-train-apollo-1.5.txt"
+        },
+        {
+            "size": "62.06GB",
+            "name": "annotation-apollo_scape_label-train_depth-apollo-1.5.tar"
+        },
+        {
+            "size": "45.9GB",
+            "name": "annotation-apollo_scape_label-train_image-apollo-1.5.tar"
+        },
+        {
+            "size": "1.76GB",
+            "name": "annotation-apollo_scape_label-train_label-apollo-1.5.tar"
+        },
+        {
+            "size": "6.56MB",
+            "name": "annotation-apollo_scape_label-train_pose-apollo-1.5.tar"
+        }
+    ],
+    "sensor": [
+        {
+            "size": "8.93GB",
+            "name": "demo-sensor-demo-apollo-1.5.bag"
+        },
+        {
+            "size": "20.15KB",
+            "name": "demo-sensor-64E_S3_calibration_example-apollo-1.5.yaml"
+        },
+        {
+            "size": "312B",
+            "name": "demo-sensor-velodyne64_novatel_extrinsics_example-apollo-1.5.yaml"
+        },
+        {
+            "size": "3.2GB",
+            "name": "demo-sensor-data-apollo-2.0.tar.gz"
+        }
+    ],
+    "e2e": [
+        {
+            "size": "16.48GB",
+            "name": "demo-e2e-trainsets1-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "16.34GB",
+            "name": "demo-e2e-trainsets2-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "14.41GB",
+            "name": "demo-e2e-trainsets3-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "16.89GB",
+            "name": "demo-e2e-trainsets4-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "16.83GB",
+            "name": "demo-e2e-trainsets5-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "12.31GB",
+            "name": "demo-e2e-trainsets6-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "21.49GB",
+            "name": "demo-e2e-trainsets7-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "13.37GB",
+            "name": "demo-e2e-trainsets8-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "10.9GB",
+            "name": "demo-e2e-trainsets9-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "16.93GB",
+            "name": "demo-e2e-trainsets10-apollo-1.5.tar.gz"
+        },
+        {
+            "size": "4.16GB",
+            "name": "demo-e2e-testsets-apollo-1.5.tar.gz"
+        }
+    ]
+}

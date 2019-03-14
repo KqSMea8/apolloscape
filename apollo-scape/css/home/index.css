@@ -1,0 +1,616 @@
+html, body {
+    height: 100%;
+    font-family: PingFangSC-Regular;
+    width: 100%;
+}
+.home-wrapper {
+    text-align: center;
+}
+
+.swiper-container {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-wrapper {
+    margin: 0 auto;
+    height: 100%;
+    min-height: 800px;
+    width: 100%;
+}
+
+.swiper-slide .banner-bg{
+    width: 100%;
+    position: relative;
+    z-index: 15;
+    top: 0;
+    left: 0;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.swiper-wrapper .banner-content {
+    width: 1200px;
+    z-index: 20;
+    height: 100%;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.swiper-wrapper .banner-content-bg-one {
+    background:#030824 center center url(/public/img/index/banner.jpg) no-repeat;
+}
+
+.swiper-wrapper .banner-content-bg-two {
+    background:#030824 center center  url(/public/img/index/banner-1.png) no-repeat;
+}
+
+.swiper-wrapper .banner-content-bg-three {
+    background:#030824 center center  url(/public/img/index/banner-2.png) no-repeat;
+}
+
+.banner-content .lang-cn,
+.banner-content .lang-en {
+    display:none;
+}
+.banner-inner {
+    padding-left: 30px;
+    height: 490px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    font-family: "PingFangSC-Regular";
+}
+.ban-title-one {
+    padding-top: 230px;
+    line-height: 56px;
+    height: 56px;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.ban-title-two {
+    line-height: 42px;
+    height: 42px;
+    margin-top: 10px;
+    font-size: 30px;
+    z-index: 10;
+}
+
+.ban-brief {
+    margin-top: 30px;
+    line-height: 25px;
+    z-index: 10;
+    opacity: 0.5;
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 710px;
+}
+
+.ban-brief-hr {
+    display:block;
+    margin-top:20px;
+    height: 4px;
+    width: 60px;
+    background: #FFFFFF;
+}
+
+.ban-brief-btn {
+    text-align: center;
+    display: block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: #FFF;
+    font-size: 18px;
+    border: 1px #FFF solid;
+    line-height: 25px;
+    width: 140px;
+}
+
+.ban-brief-btn:hover {
+    color: #006AFF;;
+    border: 1px #006AFF solid;
+}
+
+.home-intro {
+    margin-top: 80px;
+}
+
+.home-intro .left-content-item {
+    width: 600px;
+    padding-left: 10px;
+}
+
+.left-content-item .title {
+    margin-top: 20px;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    line-height:28px;
+}
+
+.left-content-item .content {
+    margin-top: 10px;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+}
+
+.left-content-item .btn {
+    margin-top:30px;
+    width: 98px;
+    height: 28px;
+    border: 1px #cbcbcb solid;
+    line-height: 30px;
+    display: block;
+    text-align:center;
+    color: #666;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.left-content-item .btn:hover {
+    background-color: #F3F8FE;
+    border: 1px #F3F8FE solid;
+    cursor: pointer;
+}
+
+.right-content-item {
+    margin-left: 80px;
+}
+
+.right-content-item .back{
+    z-index: 5;
+    width: 450px;
+    height: 260px;
+    background: #fff url(/public/img/index/title.png) repeat;
+}
+
+.right-content-item .intro-img{
+    padding: 10px;
+    width: 450px;
+}
+
+.home-more {
+    text-align: right;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    padding: 30px 50px 0 0;
+}
+
+
+.home-member {
+    width: 1180px;
+    padding: 0 10px;
+}
+
+.home-member-title {
+    margin: 80px 0 30px 0;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    line-height: 28px;
+    height: 28px;
+}
+
+.home-member-item {
+    width: 590px;
+    margin-bottom: 30px;
+}
+
+.home-member-item .member-image {
+    width: 200px;
+    padding-bottom: 50px;
+    padding-right: 30px
+}
+
+.home-member-item .member-name {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 26px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.home-member-item .member-name a{
+    color: #333333;
+}
+
+.home-member-item .member-from {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.home-member-item .member-intro {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 21px;
+    height: 21px;
+    width: 290px;
+    padding-top: 20px;
+}
+
+.home-member {
+    width: 1180px;
+    padding: 0 10px;
+}
+
+.home-member-title {
+    margin: 80px 0 30px 0;
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    line-height: 28px;
+    height: 28px;
+}
+
+.home-member-item {
+    width: 590px;
+}
+
+.home-member-item .member-image {
+    width: 200px;
+    padding-bottom: 50px;
+    padding-right: 30px
+}
+
+.home-member-item .member-name {
+    font-family: PingFangSC-Regular;
+    font-size: 20px;
+    color: #333333;
+    letter-spacing: 0;
+    line-height: 26px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.home-member-item .member-name a{
+    color: #333333;
+}
+
+.home-member-item .member-from {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666666;
+    letter-spacing: 0;
+    line-height: 20px;
+    height: 20px;
+    padding-top: 10px;
+}
+
+.home-member-item .member-intro {
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #999999;
+    letter-spacing: 0;
+    line-height: 21px;
+    height: 21px;
+    width: 290px;
+    padding-top: 20px;
+}
+
+.home-member-title-2 {
+    height: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.update-log-item ul {
+    margin-left: 20px;
+}
+
+
+.update-log-item li {
+    list-style-type: disc;
+    font-family: PingFangSC-Regular;
+    font-size: 14px;
+    color: #666;
+    line-height: 28px;
+}
+
+@media screen and (min-width: 750px) {
+    .mobile-container {
+        display: none;
+    }
+}
+@media screen and (max-width: 750px) {
+    .swiper-container {
+        display: none;
+    }
+    .pc-container {
+        display: none;
+    }
+    .mobile-container {
+        width: 1242px;
+        margin: 0 auto;
+        top: 0;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+    }
+    .mobile-banner {
+        width: 1242px;
+        height: 1572px;
+        background: url(/public/img/index/mobile-banner.jpg) no-repeat;
+    }
+    .mobile-banner .title {
+        padding-top: 1024px;
+        color: #fff;
+        font-size: 93px;
+        line-height: 131px;
+    }
+    .mobile-banner .sub-title {
+        padding-top: 5px;
+        font-size: 63px;
+        color: #fff;
+        line-height: 88px;
+    }
+    .mobile-intro {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .mobile-intro .title {
+        margin-top: 160px;
+        font-size: 63px;
+        color: #333;
+        letter-spacing: 20px;
+        line-height:88px;
+    }
+    .mobile-intro .brief {
+        font-size: 42px;
+        color: #333;
+        letter-spacing: 2.15px;
+        line-height: 59px;
+        text-align: left;
+        padding: 35px 85px;
+
+    }
+    .mobile-intro .back {
+        margin: 0 auto;
+        text-align: center;
+        z-index: 5;
+        width: 900px;
+        height: 520px;
+        background: #fff url(/public/img/index/title.png) repeat;
+    }
+    .mobile-intro .intro-img {
+        padding: 20px;
+        width: 900px;
+    }
+    .mobile-member {
+        width: 100%;
+        background: #f5f6f8;
+        margin-top: 180px;
+    }
+    .mobile-member .title {
+        padding-top: 70px;
+        padding-bottom: 70px;
+        font-size: 63px;
+        color: #333;
+        line-height: 88px;
+    }
+    .mobile-member .item {
+        width: 1072px;
+        height: 360px;
+        background: #FFF;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .mobile-member .item .image {
+        width: 360px;
+        height: 360px;
+    }
+    .mobile-member .item .name {
+        text-align: left;
+        font-size: 54px;
+        color: #333;
+        letter-spacing: 0;
+        line-height: 75px;
+        margin-top: 60px;
+        margin-left: 60px;
+    }
+    .mobile-member .item .from {
+        font-size: 42px;
+        color: #999;
+        letter-spacing: 0;
+        margin-top: 30px;
+        margin-left: 60px;
+        text-align: left;
+    }
+    .mobile-update-log {
+        margin-bottom: 80px;
+    }
+    .mobile-update-log ul {
+        margin-left: 40px;
+    }
+    .mobile-update-log li {
+        margin-top: 20px;
+        text-align: left;
+        list-style-type: disc;
+        letter-spacing: 2.15px;
+        font-family: PingFangSC-Regular;
+        font-size: 42px;
+        color: #999;
+        line-height: 63px;
+    }
+    .mobile-update-log-itme {
+        width: 1072px;
+        background: #fff;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .mobile-title-2 {
+        text-align: left;
+        font-size: 48px;
+        color: #333;
+        letter-spacing: 0;
+        line-height: 75px;
+    }
+    .mb70 {
+        margin-bottom: 70px;
+    }
+    .mb90 {
+        height: 90px;
+    }
+}
+.swiper-container {
+    margin: 0 auto;
+    /* margin-top: 70px!important; */
+    height: 410px!important;
+}
+.right-content-item .intro-img {
+    width: 461px;
+    height: 315px;
+    padding: 0;
+}
+.right-content-item.fl {
+    margin-left: 24px;
+}
+.right-content-item .back {
+    width: auto;
+    height: auto;
+    background: #fff;
+}
+.left-content-item .content {
+    font-size: 16px;
+    font-family: ArialMT;
+    color: rgba(51, 51, 51, .85);
+    line-height:28px;
+    margin-top: 20px;
+}
+.left-content-item .title {
+    font-size: 30px;
+    font-family: ArialMT;
+    color: rgba(0, 0, 0, 1);
+    line-height: 34px;
+}
+.left-content-item .intro-btn {
+    width: 171px;
+    height: 55px;
+    border-radius: 28px;
+    border: 1px solid rgba(22, 195, 135, 1);
+    text-align: center;
+    line-height: 55px;
+    font-size: 20px;
+    color: rgba(22, 195, 135, 1);
+}
+.home-member-container {
+    background: rgba(241, 243, 244, 1);
+    padding-top: 50px;
+}
+.home-member-container .home-member-title {
+    font-size: 32px;
+    font-family: ArialMT;
+    color: rgba(51, 51, 51, 1);
+    line-height: 48px;
+    /* margin-top: 50px; */
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    height: 48px;
+    margin-bottom: 50px;
+}
+.home-member-item .member-image {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    padding: 0;
+    margin-right: 28px;
+    margin-bottom: 43px;
+}
+.home-member-item .member-intro {
+    font-size: 14px;
+    font-family: ArialMT;
+    color: rgba(51, 51, 51, .75);
+    line-height: 21px;
+}
+.home-member-item .member-from {
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, .75);
+    line-height:21px;
+}
+.home-member-item .member-name {
+    font-size: 20px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 30px;
+}
+.home-member-title {
+    margin-top: 50px;
+    font-size: 32px;
+    font-family: ArialMT;
+    color: rgba(51, 51, 51, 1);
+    line-height:48px;
+    height: 48px;
+    text-align: center;
+}
+.update-log-item li {
+    font-size: 16px;
+    font-family: ArialMT;
+    color: rgba(51, 51, 51, .85);
+    line-height: 31px;
+}
+.swiper-wrapper .banner-content-bg-one,
+.swiper-wrapper .banner-content-bg-three {
+    background: #030824 url(/public/img/index/banner_128f1b4.jpg) no-repeat;
+    height: 410px;
+    background-size: 100% 410px;
+}
+.swiper-wrapper .banner-content-bg-two {
+    background: #030824 center center url(/public/img/index/banner_1.png) no-repeat;
+    height: 410px;
+    background-size: 100% 410px;
+}
+.ban-title-one {
+    padding-top: 50px;
+}
+.ban-brief {
+    font-size: 16px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 28px;
+    opacity: 1;
+    width: 1000px;
+}
+.ban-brief-btn:hover {
+    color: #fff;
+    border: 1px #fff solid;
+}
+.ban-title-two {
+    font-size: 36px;
+}
+.banner-inner {
+    height: auto;
+}
+.swiper-pagination-bullet {
+    width: 30px!important;
+    height: 2px!important;
+    background: rgba(255, 255, 255, .3)!important;
+    border-radius: 0!important;
+    opacity: 1!important;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background:rgba(255,255,255,1)!important;
+}

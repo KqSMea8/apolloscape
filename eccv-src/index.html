@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!-- htmlcs-disable —>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/home/index.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 750px)" href="/css/home/m-index.css">
+
+    <link rel="stylesheet" type="text/css" src="/public/third_party/swiper/swiper.css">
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+
+    <section class="banner main-wrapper pr">
+        <div class="main banner-inner tc">
+            <h1 class="ban-title">
+                <p class="ban-title-one">
+                    ECCV 2018 Workshop
+                </p>
+                <p style="font-size: 42px;">
+                    ApolloScape: Vision-based Navigation for Autonomous Driving
+                </p>
+            </h1>
+            <div class="ban-brief">
+                <img src="/public/img/index/new.png" class="new-icon">
+                The Workshop on ApolloScape for Autonomous Driving is live!
+            </div>
+        </div>
+    </section>
+
+    <section class="main-wrapper">
+        <div class="main">
+            <div class="left-content-wrapper home-wrapper">
+
+                <!-- <div class="left-content-item">
+                    <div class="title">
+                        Notice
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    <!-- </div>
+                    <div class="content">
+                        <p>Program
+                            <a href="http://wad.ai/talk.html">
+                                schedule
+                            </a>
+                            announced. Papers will be presented on the 18th, while the challenge winners will present their work on the 22nd. In addition to the regular program, we will also host a reception on the 18th evening with a live music band. Stay tuned for the location.
+                        </p>
+                    </div>
+                </div>-->
+
+
+                <div class="left-content-item">
+                    <div class="title">
+                        Abstract
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    </div>
+                    <div class="content">
+                        <p>
+                            Autonomous driving has attracted tremendous attention, especially in the past few years. Many technologies are required but robust 3D perception is an essential prerequisite for interacting with the environment. Currently, the most standard approaches are based on LIDAR for detecting and recognizing objects, for discovering drivable road, and related tasks. But 3D perception from visual information, such as images or videos, is also important for reducing cost. Moreover, it raises interesting challenges which are of particular interest to the computer vision community. The prerequisite for building a successful 3D vision system is a large amount of training and testing data with annotations of the 3D ground truth, including depth, 3D object shapes, and semantic properties. But these quantities are typically very difficult to annotate, which hinders the development of computer vision algorithms to overcome these challenges.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left-content-item">
+                    <div class="title">
+                        Technical Information
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    </div>
+                    <div class="content">
+                        <p>
+                           A successful self-driving vehicle must include three essential components. Firstly, a 3D semantic HD map at the back-end which precisely records the environment. Secondly, an on-the-fly self-localization system which puts the vehicles accurately inside the 3D HD map so that it can plot a path to every target location inside the map. Thirdly, a 3D perceptual system which detects other moving objects, and obstacles on the road, in order to avoid collisions. The prevailing approaches for solving those tasks from self-driving companies are mostly dependent on LIDAR and vision-based approaches, which potentially very low-cost, are still under research. This motivates us to propose this workshop to gather top researchers and engineers in this field targeting at solving the underlying computer vision challenges.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="content">
+                        <p>
+                           With support from the <a href="http://apollo.auto/">Baidu Apollo</a> project, we have built and will release a realistic, large-scale and high-quality dataset for the computer vision community. In particular, this dataset targets automatically generating 3D semantic HD map, vision-based self-localization and 3D object perception. In order to collect such datasets, we spent a tremendous amount of time and effort to capture and annotate images and videos from different cities. We hope this workshop will exploit this new dataset to help advance the relative computer vision algorithms.
+                        </p>
+                    </div>
+                    <br>
+                    <div class="content">
+                        <p>
+                           In the following sections, we will first elaborate several novel properties of our dataset, including the sensor setup and the labeled ground truth. Then, we will describe the details of the three challenges which correspond to the three critical components, i.e. building a 3D semantic map, self-localization. and 3D perception. We hope that this will lead to computer vision algorithms which are good enough for real self-driving car applications.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="left-content-item">
+                    <div class="title">
+                        Challenge Track
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    </div>
+                    <div class="content">
+                        <p>
+                            For all the <a href="/challenge.html">challenges</a>, in addition to testing the accuracy (which we will use to rank the algorithms) we also require the participants to specify the speed of the algorithm, the platform they use, and implementation details. We will encourage algorithms which run in real-time, i.e. 30 fps, and will highlight them in the leader-board, since speed is a crucial property for practical applications.
+                        </p>
+                    </div>
+                </div>
+
+              <!--   <div class="left-content-item">
+                    <div class="title">
+                        Challenges Introduction
+                    </div>
+                    <div class="content">
+                        <p>
+                            Autonomous Driving has attracted tremendous attention in the last few years. Among the many enabling technologies for autonomous driving, environmental perception is the most relevant to the vision community.  As such we host a challenge to understand the current status of computer vision algorithms in solving the environmental perception problems for autonomous driving.
+                        </p>
+                        <p>
+                            In this challenge, we have prepared a number of large scale datasets with fine annotation. Based on the datasets, we have define a set of realistic problems and encourage new algorithms and pipelines to be invented for autonomous driving, rather than applied on autonomous driving.
+                        </p>
+                        ​
+                        <div class="challenge">
+                            <div class="challenge-item">
+                                <span class="challenge-title">
+                                    Data Sets
+                                </span>
+                                <p>
+                                    We have collected and annotated two large scale datasets. The first is provided by Berkeley DeepDrive (BDD). The BDD sets include 100K short video clips (each is 40 seconds), one key frame in each video clips is annotated.
+                                </p>
+                                <p>
+                                    The second data set, ApolloScape set, is provide by Baidu. ApolloScape contain survey grade dense 3D points and registered multi-view RGB images at video rate, and every pixel and every 3D point are semantically labelled. In addition precise pose for each image is provided. Describe the data set more…
+                                </p>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="challenge-title">
+                                    Tasks
+                                </span>
+                                <p>
+                                    <a href="/challenge.html#task1" target="_blank">
+                                        Task 1: Drivable Area Segmentation
+                                    </a>
+                                </p>
+
+                                <p>
+                                    <a href="/challenge.html#task2" target="_blank">
+                                        Task 2: Road Object Detection
+                                    </a>
+                                </p>
+
+                                <p>
+                                    <a href="/challenge.html#task3" target="_blank">
+                                        Task 3: Video Scene Parsing
+                                    </a>
+                                </p>
+
+                                <p>
+                                    <a href="/challenge.html#task4" target="_blank">
+                                        Task 4: Domain Adaption of Semantic Segmentation
+                                    </a>
+                                </p>
+                            </div>
+                            <div class="challenge-item">
+                                <span class="challenge-title">
+                                    How to participate:
+                                </span>
+                                <p>
+                                    Interested participants are encouraged to submit via the Kaggle interface,
+                                    <a href="/">
+                                        WAD KAGGLE FEATURE
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+ -->
+                <div class="left-content-item">
+                    <div class="title">
+                        Schedule
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    </div>
+                   <!--  <div class="schedule-wrapper">
+                        <div class="end-slider first-end-slider"></div>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="date">
+                                    January 31
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    First draft of data
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    March 1st
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    Competitions Launch
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    May 15
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    Competitions Close
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    May 22
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    Paper submission
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    May 25
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    Acceptance
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    June 8
+                                </div>
+                                <div class="point">
+                                    <div class="slider-space"></div>
+                                </div>
+                                <div class="step">
+                                    Final camera ready
+                                </div>
+                            </div>
+
+                            <div class="schedule-item">
+                                <div class="date">
+                                    June 18
+                                </div>
+                                <div class="point">
+                                </div>
+                                <div class="step">
+                                    CVPR
+                                </div>
+                            </div>
+                        </div>
+                        <div class="end-slider second-end-slider"></div>
+                    </div> -->
+                    <div class="schedule-wrapper">
+
+                        <div class="rank-table-wrapper">
+                            <div class="rank-table global-rank">
+                                <div class="rank-head">
+                                    <div class="rank-head-tr">
+                                        <div class="rank-th">
+                                            Papers
+                                        </div>
+                                        <div class="rank-th">
+                                            Challenge
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rank-table-body">
+                                    <div class="rank-tr">
+                                        <div class="rank-td">
+                                            Submission
+                                        </div>
+                                        <div class="rank-td">
+                                            August 15th
+                                        </div>
+                                        <div class="rank-td">
+                                            Launch
+                                        </div>
+                                        <div class="rank-td">
+                                            August 6th
+                                        </div>
+                                    </div>
+
+                                    <div class="rank-tr">
+                                        <div class="rank-td">
+                                            Notification
+                                        </div>
+                                        <div class="rank-td">
+                                            August 27th
+                                        </div>
+                                        <div class="rank-td">
+                                            Close
+                                        </div>
+                                        <div class="rank-td">
+                                            September 5 th
+                                        </div>
+                                    </div>
+
+                                    <div class="rank-tr">
+                                        <div class="rank-td">
+                                            Camera-ready
+                                        </div>
+                                        <div class="rank-td">
+                                            September: 5th
+                                        </div>
+                                        <div class="rank-td">
+                                            Notification
+                                        </div>
+                                        <div class="rank-td">
+                                            September: 5th
+                                        </div>
+                                    </div>
+
+                                    <div class="rank-tr">
+                                        <div class="rank-td"></div>
+                                        <div class="rank-td" style="border-left: 0;"></div>
+                                        <div class="rank-td">
+                                            Camera Ready
+                                        </div>
+                                        <div class="rank-td">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="rank-tr">
+                                        <div class="rank-td rank-td-last">
+                                            ECCV Workshop: September 9th, 2018
+                                        </div>
+
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- <div class="left-content-item">
+                    <div class="title">
+                        Award
+                    </div>
+                    <div class="content">
+                        <p>
+                            Winner of the challenge would have 10k USD supported by Baidu Expected to provide 2.5k USD  for each task.
+                        </p>
+                    </div>
+                </div> -->
+
+
+                <div class="left-content-item">
+                    <div class="title">
+                        Sponsor
+                        <!-- <img src="/public/img/common/stripe.png" class="stripe"> -->
+                    </div>
+                    <div class="partener-list">
+
+                        <div class="partener-item">
+                            <a href="http://apollo.auto/"><img src="/public/img/index/color_logo.png" class="partener-image"></a>
+                        </div>
+
+                        <!-- <div class="partener-item">
+                            <img src="/public/img/index/logy2.png" class="partener-image">
+                        </div>
+
+                        <div class="partener-item">
+                            <img src="/public/img/index/logy3.png" class="partener-image">
+                        </div>
+
+                        <div class="partener-item">
+                            <img src="/public/img/index/logy4.png" class="partener-image">
+                        </div> -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="news-wrapper">
+        <div class="news">
+            <div class="news-image">
+                <img src="/public/img/index/map.png">
+            </div>
+            <div class="news-content">
+                <div class="title">
+                    News
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">
+                            2018.05.19
+                        </div>
+                        <div class="news-text">
+                            Web page is live.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+<script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
+<!-- <script type="text/javascript" src="/public/third_party/swiper/swiper.js"></script> -->
+<script type="text/javascript">
+
+// $(document).ready(function () {
+//     var swiper = new Swiper('.swiper-container', {
+//       spaceBetween: 30,
+//       centeredSlides: true,
+//       autoplay: {
+//         delay: 2500,
+//         disableOnInteraction: false,
+//       },
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//       navigation: {
+//         nextEl: '.swiper-button-next',
+//         prevEl: '.swiper-button-prev',
+//       },
+//     });
+// });
+
+</script>
+</html>

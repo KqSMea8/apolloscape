@@ -1,0 +1,472 @@
+.banner {
+    padding-top: 20px;
+}
+
+.banner:after {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.scene-banner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 80px;
+    height: 420px;
+    background: #000 center center url(/public/img/scene/banner.png) no-repeat;
+}
+
+.banner-inner {
+    padding-left:50px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+    font-family: "PingFangSC-Regular";
+}
+
+.ban-title-one {
+    padding-top: 120px;
+    line-height: 56px;
+    height: 56px;
+    font-size: 40px;
+    z-index: 10;
+}
+
+.ban-brief {
+    margin-top: 20px;
+    line-height: 25px;
+    z-index: 10;
+    opacity: 0.5;
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+.ban-brief-hr {
+    display:block;
+    margin-top:20px;
+    height: 4px;
+    width: 60px;
+    background: #FFFFFF;
+}
+
+.ban-operation .button{
+    opacity: .5;
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 5px 10px;
+    color: #FFF;
+    font-size: 18px;
+    border: 1px #FFF solid;
+    line-height: 25px;
+    width: 140px;
+}
+
+.ban-operation .button:hover {
+    color: #006AFF;
+    border: 1px #006AFF solid;
+    cursor: pointer;
+}
+
+
+.scene-body {
+    margin-top: 500px;
+    font-family: PingFangSC-Regular;
+}
+
+.scene-body .menu {
+    margin-top: 60px;
+    padding-left: 10px;
+    width: 240px;
+}
+
+.scene-body .menu li{
+    position: relative;
+    height: 60px;
+    background: 9px 0 url(/public/img/scene/li.png) no-repeat;
+    text-align: left;
+    /* padding-right: 10px;
+    line-height: 20px;
+    box-sizing: border-box;
+    padding-top: 19px; */
+}
+
+.scene-body .menu li:hover{
+    /* background: 0 0 url(/public/img/scene/li-active.png) no-repeat; */
+    cursor: pointer;
+    color: #16c387;
+}
+
+.menu-1 {
+    font-size: 14px;
+    color: #333333;
+    line-height: 60px;
+    padding-left: 40px;
+}
+
+.menu-2 {
+    font-size: 14px;
+    color: #666666;
+    line-height: 60px;
+    padding-left: 50px;
+}
+
+.scene-body .content {
+    padding-left: 25px;
+    width: 920px;
+}
+
+.scene-body .content .required {
+    color: red;
+}
+
+.ap-upload-err {
+    color: #ff4949;
+    line-height: 1;
+    padding-top: 4px;
+    margin-left: 11px;
+}
+
+.title-1 {
+    height: 28px;
+    line-height: 28px;
+    font-size: 20px;
+    color: #333333;
+}
+
+.title-2 {
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #333333;
+}
+
+.word-1 {
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+}
+
+.scene-body .content table {
+    #border-collapse:collapse;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    width: 99%;
+}
+.scene-body .content table ,
+.scene-body .content tr,
+.scene-body .content td
+{
+    background: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    font-size: 14px;
+    color: #666666;
+}
+
+.scene-body .content td {
+    padding: 0 20px;
+}
+
+.scene-body .demo p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666666;
+    line-height: 28px;
+}
+.scene-body .demo-1 {
+    width: 216px;
+}
+
+.scene-body .demo-2 {
+    width: 443px;
+}
+
+.scene-body .down_btn {
+    display: block;
+    width: 278px;
+    height: 78px;
+    background: #FFF 265px 32px url(/public/img/scene/down_btn.png) no-repeat;
+    border: 1px solid #CBCBCB;
+    color: #666666;
+    line-height: 78px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.scene-body .down_btn:hover {
+    background:  #F3F8FE  265px 32px url(/public/img/scene/down_btn.png) no-repeat;
+    border: 1px solid #F3F8FE ;
+    cursor: pointer;
+}
+
+.protocol-bg{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.5;
+    -moz-opacity: 0.5;
+    z-index: 99;
+    display: none;
+}
+
+.protocol_container {
+    z-index: 100;
+    position: fixed;
+    display: none;
+    width: 100%;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    padding-top: 5%;
+}
+
+.protocol_container .content {
+    width: 550px;
+    height: 560px;
+    background: #FFFFFF;
+    border: 1px solid #CBCBCB;
+    margin:0 auto;
+}
+
+.protocol_container .title {
+    height: 59px;
+    background: #F8F8F8;
+    width: 548px;
+}
+
+.protocol_container .title span {
+    font-size: 16px;
+    color: #333333;
+    line-height: 59px;
+    padding-left: 20px;
+}
+
+.protocol_container .title a {
+    cursor: pointer;
+    background: url(/public/img/scene/close.png) no-repeat;
+    width: 10px;
+    height: 10px;
+    margin: 22px;
+    display: block;
+}
+
+.protocol_container .protocol_text {
+    width: 510px;
+    height: 380px;
+    overflow: auto;
+    font-size: 12px;
+    color: #333333;
+    line-height: 17px;
+    margin: 20px;
+}
+
+.protocol_container .hr {
+    margin: 0 10px;
+    height: 1px;
+    width: 530px;
+    background: #CBCBCB;
+}
+
+.protocol_container .agree_btn{
+    margin-top: 25px;
+    margin-left: 20px;
+    display: block;
+    line-height: 24px;
+    color: #999;
+    font-size: 14px;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.agree_btn_no {
+    background: 0 4px url(/public/img/scene/agree_no.png) no-repeat;
+}
+
+.agree_btn_ok {
+    background: 0 4px url(/public/img/scene/agree_check.png) no-repeat;
+}
+
+.agree_btn_on {
+    background: 0 4px url(/public/img/scene/agree_on.png) no-repeat;
+}
+
+.protocol_container .submit_btn {
+    display: block;
+    width: 70px;
+    height: 40px;
+    background: #006AFF;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.protocol_container .submit_btn:hover {
+    background: #0F51AE;
+}
+
+.mt10{
+    margin-top: 10px;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.mt40{
+    margin-top: 40px;
+}
+
+.mt50{
+    margin-top: 50px;
+}
+
+.mt60{
+    margin-top: 60px;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+
+.ml26{
+    padding-left: 26px;
+}
+.ml10{
+    margin-left: 10px;
+}
+.small-imgae img {
+    width: 200px;
+}
+.el-table th>.cell {
+    text-align: center;
+}
+
+.scene-body .content .el-table__header ,
+.scene-body .content .el-table__row,
+.scene-body .content .el-table__body-wrapper td {
+    border: none;
+}
+
+.ap-upload-button {
+    border-radius: 0;
+    background: #006AFF;
+    color: #fff;
+}
+
+.ap-upload-button:hover {
+    background: #0F51AE;
+}
+
+.ap-upload-button:focus {
+    background: #0F51AE;
+}
+.menu-top {
+    position: fixed;
+    top: 100px;
+    z-index: 100;
+    width: inherit;
+}
+.sub-nav-content {
+    margin: 0 auto;
+}
+#sub-nav-ul {
+    float: unset;
+    text-align: center;
+    margin: 0 auto;
+    width: 700px;
+}
+.eccv a.submit_achievement,
+.eccv a.leader_board,
+.eccv a.data_set_btn {
+    border: #006AFF 1px solid;
+    color: #006AFF;
+    cursor: pointer;
+}
+.task-submission-btn {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #006AFF;
+    text-align: center;
+    margin-top: 20px;
+    padding: 6px 34px;
+    font-size: 14px;
+    color: #006AFF;
+}
+@media screen and (min-width: 750px) {
+    .header {
+        height: 130px;
+    }
+    .header .sub-nav {
+        display: block;
+        background: #000;
+        height: 50px;
+        width: 100%;
+    }
+    #sub-nav-ul {
+        float: left;
+        margin: 0 auto;
+        height: 50px;
+        width: 100%;
+        padding-top: 13px;
+        box-sizing: border-box;
+    }
+    #sub-nav-ul li {
+        border-right: 1px solid #fff;
+        height: 24px;
+    }
+    .scene-body {
+        width: 1280px;
+    }
+    .scene-body .menu {
+        padding-left: 0;
+    }
+    .scene-body .content {
+        width: 1015px;
+    }
+    #sub-nav-ul a {
+        display: block;
+        line-height: 24px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, .85);
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    .scene-body .down_btn {
+        width: 278px;
+        height: 52px;
+        line-height: 52px;
+        background: #fff 269px 18px url(/public/img/scene/down_btn_64b2be7.png) no-repeat;
+        background-size: 16px 16px;
+    }
+    .scene-body .down_btn:hover {
+        background: #fff 269px 18px url(/public/img/scene/down_btn_64b2be7.png) no-repeat;
+        background-size: 16px 16px;
+    }
+
+    .scene-banner {
+        /* position: static; */
+        top: 130px;
+    }
+    .menu-top {
+        top: 150px;
+    }
+    body {
+        padding-top: 130px;
+    }
+    .spce-icon {
+        position: relative;
+        top: -3px;
+    }
+    .spce-icon.extra {
+        position: relative;
+        top: -1px;
+    }
+}

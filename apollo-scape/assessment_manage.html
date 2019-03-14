@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/benchmark.css">
+    <link rel="stylesheet" href="/js/lib/element-ui.min.css">
+    <script src="/js/lib/element-ui.min.js"></script>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container"></div>
+        <!--
+        <div class="main banner-inner tl">
+            <p class="ban-title-one">ApolloScape场景解析数据集</p>
+            <div class="ban-brief">
+                <p>CVPR2018 Workshop on autonomous driving</p>
+                <p>Autonomous driving is becoming the most attractive application of computer vision, </p>
+                <p>with a huge market and a high demand for robust and distributable algorithms. </p>
+            </div>
+            <p class="ban-brief-hr"  id="to_intro_href"></p>
+        </div>
+        -->
+    </section>
+    
+    <section class="main-wrapper">
+        <div class="main scene-body" id="app_container" v-cloak>
+            <div class="content">
+                <p class="title-1 mt60" id="to_data_href">Pixel-level semantic segmentation for street views</p>
+                <div class="mt20">
+                    <el-table class="sd-table mt10" :data="tableData1" border style="width: 100%; overflow: visible;">
+                        <el-table-column prop="method_name" label="Method">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.task_status==0">
+                                    {{scope.row.method_name}}
+                                </span>
+                                <a :href="'/benchmark_detail.html?method_id=' + scope.row.method_id" v-if="scope.row.task_status!=0">
+                                    {{scope.row.method_name}}
+                                </a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="Update Time">
+                            <template slot-scope="scope">
+                                {{$.tool.Unitformat(scope.row.update_time)}}
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="状态">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.task_status!=0">
+                                    {{$t('state_' + scope.row.task_status)}}
+                                </span>
+                                <a :href="'/submit_assessment.html?method_id=' + scope.row.method_id" v-if="scope.row.task_status==0">
+                                    {{$t('state_' + scope.row.task_status)}}
+                                </a>
+                                &nbsp;
+                                <el-tooltip class="item" effect="dark" :content="$t('state_info_' + scope.row.task_status)" placement="top-start">
+                                    <i class="el-icon-question"></i>
+                                </el-tooltip>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="miou_score" label="Miou"></el-table-column>
+                        <el-table-column prop="pub_link" label="Publish">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.is_pub==1">
+                                    {{$t('is_pub')}}
+                                </span>
+                                <span v-if="scope.row.is_pub==0">
+                                    {{$t('not_is_pub')}}&nbsp;
+                                    <a :href="'/submit_assessment.html?method_id=' + scope.row.method_id">
+                                        公开展示
+                                    </a>&nbsp;
+                                    <el-tooltip class="item" effect="dark" :content="$t('pub_info')" placement="top-start">
+                                        <i class="el-icon-question"></i>
+                                    </el-tooltip>
+                                </span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="操作">
+                            <template slot-scope="scope">
+                                <a href="javascript:void(0)" v-on:click="edit(scope.$index, scope.row)">编辑</a>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                </div>
+                <p class="title-1 mt60" id="to_define_href">Pixel-level semantic segmentation for lane markings</p>
+                <div class="mt20">
+                    <el-table class="sd-table mt10" :data="tableData1" border style="width: 100%; overflow: visible;">
+                        <el-table-column prop="method_name" label="Method">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.task_status==0">
+                                    {{scope.row.method_name}}
+                                </span>
+                                <a :href="'/benchmark_detail.html?method_id=' + scope.row.method_id" v-if="scope.row.task_status!=0">
+                                    {{scope.row.method_name}}
+                                </a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="Update Time">
+                            <template slot-scope="scope">
+                                {{$.tool.Unitformat(scope.row.update_time)}}
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="状态">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.task_status!=0">
+                                    {{$t('state_' + scope.row.task_status)}}
+                                </span>
+                                <a :href="'/submit_assessment.html?method_id=' + scope.row.method_id" v-if="scope.row.task_status==0">
+                                    {{$t('state_' + scope.row.task_status)}}
+                                </a>
+                                &nbsp;
+                                <el-tooltip class="item" effect="dark" :content="$t('state_info_' + scope.row.task_status)" placement="top-start">
+                                    <i class="el-icon-question"></i>
+                                </el-tooltip>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="miou_score" label="Miou"></el-table-column>
+                        <el-table-column prop="pub_link" label="Publish">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.is_pub==1">
+                                    {{$t('is_pub')}}
+                                </span>
+                                <span v-if="scope.row.is_pub==0">
+                                    {{$t('not_is_pub')}}&nbsp;
+                                    <a :href="'/submit_assessment.html?method_id=' + scope.row.method_id">
+                                        公开展示
+                                    </a>&nbsp;
+                                    <el-tooltip class="item" effect="dark" :content="$t('pub_info')" placement="top-start">
+                                        <i class="el-icon-question"></i>
+                                    </el-tooltip>
+                                </span>
+                            </template>
+                        </el-table-column>
+                        <el-table-column label="操作">
+                            <template slot-scope="scope">
+                                <a href="javascript:void(0)" v-on:click="edit(scope.$index, scope.row)">编辑</a>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+        <!--
+        <div class="content">
+            <div class="title">
+                <span>开发者协议</span>
+                <a id="close_protocol" class="fr"></a>
+            </div>
+            <div class="cb"></div>
+            <div class="protocol_text">
+                <p>本《开发者协议》（“本协议”）适用于您（“开发者”）对百度及其关联方（“我方”）网站、产品、服务、应用及开放存取数据集（合称“服务”）的访问及使用。请仔细阅读本协议，若开发者对本协议有任何疑问，请与我方联系。若开发者采取任何方式访问或使用服务，则表示开发者同意受本协议约束：</p>
+                <p>This Developer Agreement (this “Agreement”) governs your (“Developer”) access to and use of the websites, products, services, applications and open-access data sets (collectively, the “Service”) of Baidu and its affiliates (“we,” “us” or “ours”). Please read this Agreement carefully, and contact us if the Developer has any questions regarding this Agreement. Any access to or use of the Services indicates that the Developer agrees to be bound by this Agreement.</p>
+                <p>&nbsp;</p>
+                <p>1 开发者的一般义务 </p>
+                <p>1 General Obligations of the Develope</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+            </div>
+            <div class="hr"></div>
+            <a class="agree_btn agree_btn_no fl">我已阅读并同意上述条款与条件</a>
+            <a class="submit_btn fr">确认</a>
+        </div>
+        -->
+        
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/assessment_manage.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

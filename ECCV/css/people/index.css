@@ -1,0 +1,83 @@
+.partener-item + .partener-item {
+    margin-top: 21px;
+}
+.partener-item .partener-item-image {
+    display: inline-block;
+    vertical-align: top;
+    width: 193px;
+    height: 264px;
+}
+.partener-item .partener-item-content {
+    display: inline-block;
+    margin-left: 20px;
+    width: 946px;
+    vertical-align: text-top;
+}
+.partener-item .name {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.partener-item .intro {
+    padding-top: 5px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #151515;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.partener-item .text {
+    font-size: 16px;
+    color: #999999;
+    line-height: 30px;
+}
+.committee-list + .committee-list {
+    margin-top: 20px;
+}
+.committee-item {
+    display: inline-block;
+    width: 290px;
+    vertical-align: top;
+    margin-top: 10px;
+}
+.committee-item img {
+    display: inline-block;
+    width: 290px;
+    height: 231px;
+}
+/*.committee-item {
+    margin-left: 6px;
+}*/
+
+.committee-intro {
+    display: inline-block;
+    padding: 20px 20px 0 20px;
+}
+.committee-intro .insitution {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 14px;
+    color: #333;
+    letter-spacing: 0;
+}
+.comittee-intro .name {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.committee-intro .intro {
+    display: inline-block;
+    width: 252px;
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0;
+}
+.committee-list {
+    display: inline-block;
+    width: 1180px;
+}
+.committee-intro {
+    height: 100%;
+}

@@ -1,0 +1,120 @@
+.paper-item img {
+    display: inline-block;
+    vertical-align: top;
+}
+.paper-item .paper-content {
+    display: inline-block;
+    width: 715px;
+    margin-left: 16px;
+}
+.paper-item .paper-content .title {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.paper-item .paper-content .date {
+    padding: 20px 0 10px 0;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.paper-item .paper-content .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+}
+
+.paper-item + .paper-item {
+    margin-top: 40px;
+}
+
+.submission-btn-group {
+    margin-top: 40px;
+}
+.submission-btn-group .submission-btn {
+    display: inline-block;
+    width: 120px;
+    border: 1px solid #006AFF;
+    text-align: center;
+    padding: 6px 34px;
+    font-size: 14px;
+    color: #006AFF;
+}
+.submission-btn + .submission-btn {
+    margin-left: 40px;
+}
+.must-start {
+    color: #f14845;
+}
+
+.file-upload {
+    margin-bottom: 10px;
+}
+.rank-table {
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid #e6ecf3;
+}
+.rank-head-tr {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0;
+}
+.rank-th {
+    display: inline-block;
+    text-align: center;
+    width: 580px;
+    height: 67px;
+    line-height: 67px;
+}
+.rank-th-lane {
+    width: 234px;
+}
+.rank-th-lane-small {
+    width: 118px;
+}
+.rank-table-body {
+    font-size: 14px;
+}
+.rank-table-body .rank-tr:nth-of-type(even) {
+    background-color: #f5f6f8;
+}
+.rank-table-body .rank-td {
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    height: 67px;
+    line-height: 67px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rank-table-body .rank-td-lane {
+    width: 234px;
+}
+.rank-table-body .rank-td-lane-small {
+    width: 118px;
+}
+.rank-td + .rank-td {
+    border-left: 1px solid #e6ecf3;
+}
+.rank-td-last {
+    width: 1180px;
+}
+.nav-tabs .nav-item-task{
+    margin-bottom: -1px;
+}
+.nav-item-task .nav-link.sleep:hover,
+.nav-item-task:hover{
+    border: 0;
+}
+.none-display {
+    display:none;
+}
+.fail-text {
+    color:#c82333;
+}

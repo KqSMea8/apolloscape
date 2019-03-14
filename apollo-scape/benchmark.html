@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/benchmark.css">
+    <link rel="stylesheet" href="/js/lib/element-ui.min.css">
+    <script src="/js/lib/element-ui.min.js"></script>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container"></div>
+        <!--
+        <div class="main banner-inner tl">
+            <p class="ban-title-one">ApolloScape场景解析数据集</p>
+            <div class="ban-brief">
+                <p>CVPR2018 Workshop on autonomous driving</p>
+                <p>Autonomous driving is becoming the most attractive application of computer vision, </p>
+                <p>with a huge market and a high demand for robust and distributable algorithms. </p>
+            </div>
+            <p class="ban-brief-hr"  id="to_intro_href"></p>
+        </div>
+        -->
+    </section>
+    
+    <section class="main-wrapper">
+        <div class="main scene-body" id="app_container" v-cloak>
+            <div class="content">
+                <p class="word-1 mt20">{{$t('text0')}} <a href="submit_assessment.html">{{$t('text2')}}</a>.</p>
+                <p class="title-1 mt60" id="to_data_href">{{$t('text3')}}</p>
+                <p class="word-1 mt20">{{$t('text4')}}</p>
+                <br>
+                <p class="word-1">{{$t('text5')}}</p>
+                <img src="/public/img/benchmark/u108.png">
+                <p class="title-1 mt60" id="to_define_href">{{$t('text6')}}</p>
+
+                <div class="mt20">
+                    <el-input placeholder="Search Method or Mechanism " v-model="searchInfo" style="width: 300px" size="medium">
+                        <el-button slot="append" icon="el-icon-search" v-on:click="search"></el-button>
+                    </el-input>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <el-button size="medium" v-on:click="download">.CSV</el-button>
+                    <el-table class="sd-table mt10" :data="tableData" border style="width: 100%" :default-sort = "{prop: 'rank', order: 'ascending'}" v-on:filter-change="filterChange" v-on:sort-change="sortChange">
+                        <el-table-column fixed prop="rank" width="80" label="rank" sortable>
+                        </el-table-column>
+                        <el-table-column prop="method_name" width="120" fixed label="Method">
+                            <template slot-scope="scope">
+                                <a :href="'/benchmark_detail.html?method_id=' + scope.row.method_id">{{scope.row.method_name}}</a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="mechanism" width="120" fixed label="Mechanism"></el-table-column>
+                        <el-table-column width="100" fixed label="code" :filters="[{ text: 'Yes', value: '1' }, { text: 'No', value: '0' }]" :filter-method="filterCode" column-key="is_code">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.is_code==0">
+                                    No
+                                </span>
+                                <a :href="scope.row.project_page" v-if="scope.row.is_code==1">Yes</a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column width="110" fixed label="Publication" :filters="[{ text: 'Yes', value: '1' }, { text: 'No', value: '0' }]" :filter-method="filterPub" column-key="is_pub">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row.is_pub==0">
+                                    No
+                                </span>
+                                <a :href="scope.row.pub_link" v-if="scope.row.is_pub==1">Yes</a>
+                            </template>
+                        </el-table-column>
+                        <el-table-column prop="runtime" sortable width="120" fixed label="Runtime">
+                        </el-table-column>
+                        <el-table-column class-name="miou-score" prop="miou_score" width="80" fixed label="Miou">
+                        </el-table-column>
+                        <el-table-column v-for="item in miou_ext_name" :prop="item" :label="item" sortable :width="60 + item.length * 8">
+                            <template slot-scope="scope">
+                                <span v-if="scope.row[item]!=0">{{scope.row[item]}}</span>
+                            </template>
+                        </el-table-column>
+                    </el-table>
+                    <p class="mt10 word-1">
+                        {{$t('text9')}}
+                    </p>
+                    <el-pagination
+                        class="mt10"
+                        background
+                        layout="prev, pager, next"
+                        :total="pageTotal"
+                        :page-size="limit"
+                        v-on:current-change="changePage"
+                        :current-page="currentPage">
+                    </el-pagination>
+                </div>
+
+                <p class="title-1 mt60">{{$t('text7')}}</p>
+                <p class="word-1 mt20">{{$t('text8')}}</p>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+        <!--
+        <div class="content">
+            <div class="title">
+                <span>开发者协议</span>
+                <a id="close_protocol" class="fr"></a>
+            </div>
+            <div class="cb"></div>
+            <div class="protocol_text">
+                <p>本《开发者协议》（“本协议”）适用于您（“开发者”）对百度及其关联方（“我方”）网站、产品、服务、应用及开放存取数据集（合称“服务”）的访问及使用。请仔细阅读本协议，若开发者对本协议有任何疑问，请与我方联系。若开发者采取任何方式访问或使用服务，则表示开发者同意受本协议约束：</p>
+                <p>This Developer Agreement (this “Agreement”) governs your (“Developer”) access to and use of the websites, products, services, applications and open-access data sets (collectively, the “Service”) of Baidu and its affiliates (“we,” “us” or “ours”). Please read this Agreement carefully, and contact us if the Developer has any questions regarding this Agreement. Any access to or use of the Services indicates that the Developer agrees to be bound by this Agreement.</p>
+                <p>&nbsp;</p>
+                <p>1 开发者的一般义务 </p>
+                <p>1 General Obligations of the Develope</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+            </div>
+            <div class="hr"></div>
+            <a class="agree_btn agree_btn_no fl">我已阅读并同意上述条款与条件</a>
+            <a class="submit_btn fr">确认</a>
+        </div>
+        -->
+        
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/benchmark.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

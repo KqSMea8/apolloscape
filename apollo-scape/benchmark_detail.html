@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/benchmark.css">
+    <link rel="stylesheet" href="/js/lib/element-ui.min.css">
+    <script src="/js/lib/element-ui.min.js"></script>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container"></div>
+        <!--
+        <div class="main banner-inner tl">
+            <p class="ban-title-one">ApolloScape场景解析数据集</p>
+            <div class="ban-brief">
+                <p>CVPR2018 Workshop on autonomous driving</p>
+                <p>Autonomous driving is becoming the most attractive application of computer vision, </p>
+                <p>with a huge market and a high demand for robust and distributable algorithms. </p>
+            </div>
+            <p class="ban-brief-hr"  id="to_intro_href"></p>
+        </div>
+        -->
+    </section>
+    
+    <section class="main-wrapper">
+        <div class="main scene-body" id="app_container" v-cloak>
+            <div class="content">
+                <el-breadcrumb separator-class="el-icon-arrow-right">
+                    <el-breadcrumb-item><a href="/">Home</a></el-breadcrumb-item>
+                    <el-breadcrumb-item><a href="/benchmark.html">Benchmark</a></el-breadcrumb-item>
+                    <el-breadcrumb-item>Method Details</el-breadcrumb-item>
+                </el-breadcrumb>
+                <p class="title-1 mt40" style="font-size: 32px;">X-MAN</p>
+                <p class="title-1 mt40">Method overview</p>
+                <div class="overview mt20">
+                    <div class="overview-item">
+                        <div class="overview_key">Method ：</div>
+                        <div class="overview_value">{{overview.method_name}}</div>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview_key">Mechanism：</div>
+                        <div class="overview_value">{{overview.mechanism}}</div>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview_key">Description ：</div>
+                        <div class="overview_value" style="line-height: 24px;">{{overview.method_desc}}</div>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview_key">Code\Project</div>
+                        <div class="overview_value">{{overview.project_page}}</div>
+                    </div>
+                    <div class="overview-item">
+                        <div class="overview_key">Publication</div>
+                        <div class="overview_value"><a :href="overview.pub_link">{{overview.pub_link}}</a></div>
+                    </div>
+                </div>
+                <p class="title-1 mt40">Class results &nbsp;
+                    <el-button size="mini" v-on:click="download">.CSV</el-button>
+                </p>
+                <div class="mt20">
+                    <el-table class="sd-table mt10" :data="tableData" border style="width: 100%">
+                        <el-table-column class-name="miou-score" prop="Miou" label="Miou" fixed></el-table-column>
+                        <el-table-column v-for="item in miou_class" :prop="item" :label="item" :width="50 + item.length * 6"></el-table-column>
+                    </el-table>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+        <!--
+        <div class="content">
+            <div class="title">
+                <span>开发者协议</span>
+                <a id="close_protocol" class="fr"></a>
+            </div>
+            <div class="cb"></div>
+            <div class="protocol_text">
+                <p>本《开发者协议》（“本协议”）适用于您（“开发者”）对百度及其关联方（“我方”）网站、产品、服务、应用及开放存取数据集（合称“服务”）的访问及使用。请仔细阅读本协议，若开发者对本协议有任何疑问，请与我方联系。若开发者采取任何方式访问或使用服务，则表示开发者同意受本协议约束：</p>
+                <p>This Developer Agreement (this “Agreement”) governs your (“Developer”) access to and use of the websites, products, services, applications and open-access data sets (collectively, the “Service”) of Baidu and its affiliates (“we,” “us” or “ours”). Please read this Agreement carefully, and contact us if the Developer has any questions regarding this Agreement. Any access to or use of the Services indicates that the Developer agrees to be bound by this Agreement.</p>
+                <p>&nbsp;</p>
+                <p>1 开发者的一般义务 </p>
+                <p>1 General Obligations of the Develope</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+            </div>
+            <div class="hr"></div>
+            <a class="agree_btn agree_btn_no fl">我已阅读并同意上述条款与条件</a>
+            <a class="submit_btn fr">确认</a>
+        </div>
+        -->
+        
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/benchmark_detail.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

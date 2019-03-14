@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/news/index.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 750px)" href="/css/news/m-index.css">
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+    <section class="main-wrapper">
+        <div class="main">
+            <div class="left-content-wrapper">
+                <div class="left-content-item">
+                    <div class="news-list">
+
+                        <div class="new-item" data-n="1">
+
+                            <div class="title">
+                                The Baidu AI conference was held in Beijing to release new products Apollo and Duer OS
+                            </div>
+
+                            <div class="time">
+                                2018-01-30 14:32
+                            </div>
+
+                            <div class="content">
+
+                                <p>
+                                    In this dataset, Baidu provides more than 1470 full variety shows with their playback links and files containing extracted features. The time stamps of wonderful clips are labeled accurately for each video. The researchers can design algorithms and train models using these videos and labeled clips in the training dataset. The evaluation of models or algorithms is done based on the deviation between the time stamps in the submitted results and the time stamps in our ground truth.
+                                </p>
+
+                                <img src="/public/img/common/stripe.png">
+
+                                <p>
+                                    In this dataset, Baidu provides more than 1470 full variety shows with their playback links and files containing extracted features. The time stamps of wonderful clips are labeled accurately for each video. The researchers can design algorithms and train models using these videos and labeled clips in the training dataset. The evaluation of models or algorithms is done based on the deviation between the time stamps in the submitted results and the time stamps in our ground truth.
+                                </p>
+
+                            </div>
+                        </div>
+
+                        <div class="new-item" data-n="2">
+
+                            <div class="title">
+                                The Baidu AI conference was held in Beijing to release new products Apollo and Duer OS
+                            </div>
+
+                            <div class="time">
+                                2018-01-30 14:33
+                            </div>
+
+                            <div class="content">
+
+                                <p>
+                                    In this dataset, Baidu provides more than 1470 full variety shows with their playback links and files containing extracted features. The time stamps of wonderful clips are labeled accurately for each video. The researchers can design algorithms and train models using these videos and labeled clips in the training dataset. The evaluation of models or algorithms is done based on the deviation between the time stamps in the submitted results and the time stamps in our ground truth.
+                                </p>
+
+                                <img src="/public/img/common/stripe.png">
+
+                                <p>
+                                    In this dataset, Baidu provides more than 1470 full variety shows with their playback links and files containing extracted features. The time stamps of wonderful clips are labeled accurately for each video. The researchers can design algorithms and train models using these videos and labeled clips in the training dataset. The evaluation of models or algorithms is done based on the deviation between the time stamps in the submitted results and the time stamps in our ground truth.
+                                </p>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <link rel="import" href="./common/right-menu.html?__inline">
+        </div>
+    </section>
+
+    <script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var search = window.location.search;
+            var n = search.replace('?', '').split('=')[1];
+            var newItemArr = $('.news-list .new-item');
+
+            $.each(newItemArr, function (index, ele) {
+
+                if ($(ele).attr('data-n') == n) {
+                    $(ele).show();
+                    return false;
+                }
+            });
+
+        });
+    </script>
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

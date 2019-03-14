@@ -1,0 +1,48 @@
+.paper-item img {
+    display: inline-block;
+    vertical-align: top;
+}
+.paper-item .paper-content {
+    display: inline-block;
+    width: 715px;
+    margin-left: 16px;
+}
+.paper-item .paper-content .title {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.paper-item .paper-content .date {
+    padding: 20px 0 10px 0;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.paper-item .paper-content .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+}
+
+.paper-item + .paper-item {
+    margin-top: 40px;
+}
+
+.submission-btn-group {
+    margin-top: 40px;
+}
+.submission-btn-group .submission-btn {
+    display: inline-block;
+    width: 120px;
+    border: 1px solid #006AFF;
+    text-align: center;
+    padding: 6px 34px;
+    font-size: 14px;
+    color: #006AFF;
+}
+.submission-btn + .submission-btn {
+    margin-left: 40px;
+}

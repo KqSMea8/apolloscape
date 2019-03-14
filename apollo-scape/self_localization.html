@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/github.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/scene.css">
+    <style type="text/css">
+        .scene-body .content .github_table {
+            border: unset;
+            height: unset;
+        }
+
+        .markdown-body p,
+        .markdown-body blockquote,
+        .markdown-body ul,
+        .markdown-body ol,
+        .markdown-body dl,
+        .markdown-body table,
+        .markdown-body pre {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .markdown-body .title-1 {
+            font-size: 20px;
+            color: #333;
+        }
+
+        .markdown-body .mt60 {
+            margin-top: 60px !important;
+        }
+
+        .scene-body .content {
+            padding-left: 25px;
+        }
+
+        .tip-top {
+            word-wrap: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container">
+    </section>
+    <section class="main-wrapper">
+        <div class="main scene-body" id="scene-container">
+            <div class="menu fl"></div><div class="content fl">
+                <p class="title-1 mt60" id="to_data_href">1 · Introduction</p>
+                <p class="word-1 mt20" id="to_collection_href">This repository contains the evaluation scripts for the online self-localization challenge of the ApolloScapes dataset,
+                    Where we extended the dataset with more scenes and 100x large data including recorded videos under different lighting conditions, i.e. morning, noon and night, with stereo pair of images.
+                    A test dataset for each new scene will be withheld for benchmark. (Notice we will not have point cloud for the very large data due to size of dataset).</p>
+                <p class="word-1 mt20" id="to_collection_href">Details and download of data from different roads are available. Here are some interesting facts:</p>
+                <p class="word-1 mt20" id="to_collection_href"><i>For each road, we record it by driving from start-to-end and then end-to-start at different day times,
+                    which means at each site along the road, a scene will be looked at from two opposit directions.
+                    We provide the set of record id recorded from start-to-end and the set of record id from end-to-start in training set for each road at LoopDirection.
+                    One may discover the corresponding images from the camera pose we provided.</i></p>
+                <p class="word-1 mt20" id="to_collection_href"><i>TIn this challenge, we recard records from forward (start-to-end) and inverse (end-to-start) driving as records from two different roads,
+                    which means we will not have forward videos as training while have inverse driving as testing videos. However,
+                    it could be interesting to do that in your research as showed in the work of Semantic Visual Localization.</i></p>
+                <div class="fl mt20 demo">
+
+                    <img src="./public/img/scene/datasets-self-localization.gif" width="900px">
+                </div>
+                <div class="cb"></div>
+                <p class="title-1 mt60" id="to_dataset_href">2 · Dataset Download</p>
+                <p class="title-2 mt40">Sample data</p>
+                <div class="down_list mt20 clearfix" id="to_submit_href">
+                    <a class="down_btn fl mr10" value="self-localization-sample">self_localization_examples.tar.gz</a>
+                </div>
+                <p class="title-2 mt40">Training data</p>
+                <div class="down_list mt20 clearfix" id="to_submit_href">
+                    <a class="down_btn fl mr10" value="Road11_train">Road11.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road12_train">Road12.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road14_train">Road14.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road15_train">Road15.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road16_train">Road16.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road17_train">Road17.tar.gz</a>
+                </div>
+                <p class="title-2 mt40">Testing data</p>
+                <div class="down_list mt20 clearfix" id="to_submit_href">
+                    <a class="down_btn fl mr10" value="Road11_test">Road11.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road12_test">Road12.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road14_test">Road14.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road15_test">Road15.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road16_test">Road16.tar.gz</a>
+                    <a class="down_btn fl mr10" value="Road17_test">Road17.tar.gz</a>
+                </div>
+                <div class="cb"></div>
+                <article class="markdown-body entry-content" itemprop="text">
+                    <p class="title-1 mt60" id="to_structure_href">3 · Dataset Structure</p>
+                    <p>You may download the dataset from
+                        <a href="http://apolloscape.auto/ECCV/challenge.html" rel="nofollow">self-localization</a>. The sample data is used for paper</p>
+                    <pre><code> @inproceedings{wang2018dels,
+                   title={DeLS-3D: Deep Localization and Segmentation with a 3D Semantic Map},
+                   author={Wang, Peng and Yang, Ruigang and Cao, Binbin and Xu, Wei and Lin, Yuanqing},
+                   booktitle={CVPR},
+                   pages={5860--5869},
+                   year={2018}
+                 }
+                </code></pre>
+                    <p>
+                        <code>scene_names</code> include a sample scene:</p>
+                    <ul>
+                        <li>
+                            <code>Road_01</code>: which is a small dataset with 2242 train/756 val images recorded in the same scene</li>
+                    </ul>
+                    <p>
+                        <code>data_type</code> includes:</p>
+                    <ul>
+                        <li>
+                            <code>image</code>: the RGB image from the dataset</li>
+                        <li>
+                            <code>pose</code>: the abosolute pose (roll,pitch,yall,x,y,z) of each image related to a map (Notice this is converted from the
+                            4x4 pose matrix from Apolloscape dataset)</li>
+                        <li>
+                            <code>camera_params</code>: the intrinsic parameter of the camera</li>
+                        <li>
+                            <code>split</code>: the train val split used in the paper</li>
+                    </ul>
+                    <p>
+                        <code>sequence_id</code>, each sequence, i.e. Recordxxx is a video sequence of the corresponding scene and the images are sorted numerically.</p>
+                    <p>
+                        <code>camera_id</code>, each scene we provide images recorede by two camera facing front side.</p>
+                    <ul>
+                        <li>
+                            <code>zpark</code>:
+                            <code>Camera_1</code> and
+                            <code>Camera_2</code> There is a camera-name in-consistency of the device between the two scene, which will be fixed for the larger
+                            dataset later.</li>
+                    </ul>
+                    <p>Here
+                        <code>split</code> include the train and val image names for each scene, where val images are recorded at different period with training
+                        images.</p>
+                    <p>Similar data structure is described in apolloscape.auto/scene.html, while having the pose saved in a 4x4 matrix, a conversion
+                        code from 4x4 matrix to 6 DOF is provided in
+                        <code>utils</code> of this toolkit.</p>
+                    <p>Later we will also release semantic labels, and semantic 3d point cloud python toolkit to render 3d point to 2d image
+                        for visualizing the semantic points.</p>
+                    <p class="title-1 mt60" id="to_evaluation_href">4 · Evaluation</p>
+                    <p>There are several scripts included with the dataset in a folder named
+                        <code>scripts</code>
+                    </p>
+                    <ul>
+                        <li>
+                            <code>eval_pose.py</code> Code for evalution pose accuracy based the commonly used eval metric of meidian translation and rotation error.</li>
+                    </ul>
+                    <p>Code for test evaluation:</p>
+                    <div class="highlight highlight-source-shell">
+                        <pre><span class="pl-c"><span class="pl-c">#!</span>/bin/bash</span>
+                python eval_pose.py --test_dir=<span class="pl-s"><span class="pl-pds">'</span>./test_eval_data/pose_res<span class="pl-pds">'</span></span> --gt_dir=<span class="pl-s"><span class="pl-pds">'</span>./test_eval_data/pose_gt<span class="pl-pds">'</span></span> --res_file=<span class="pl-s"><span class="pl-pds">'</span>./test_eval_data/res.txt<span class="pl-pds">'</span></span></pre>
+                    </div>
+                    <p class="title-1 mt60" id="to_metric_href">5 · Metric formula</p>
+                    <p>For each image, given the predicted rotation
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/3cf87ea38a615ed99e0232f8ed9431fe.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/3cf87ea38a615ed99e0232f8ed9431fe.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="12.067218899999991pt" height="14.15524440000002pt/" style="max-width:100%;">
+                        </a> and translation
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/02ab12d0013b89c8edc7f0f2662fa7a9.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/02ab12d0013b89c8edc7f0f2662fa7a9.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="10.58699729999999pt" height="20.221802699999984pt/" style="max-width:100%;">
+                        </a> of image
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/77a3b857d53fb44e33b53e4c8b68351a.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="5.663225699999989pt" height="21.68300969999999pt/" style="max-width:100%;">
+                        </a>, and the ground truth
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/8baf725662988147b566a34101b2f41d.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/8baf725662988147b566a34101b2f41d.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="14.608149599999992pt" height="22.63846199999998pt/" style="max-width:100%;">
+                        </a> and
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/794f29f339ded8d1f520558a6fdd129e.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/794f29f339ded8d1f520558a6fdd129e.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="12.671292149999989pt" height="22.63846199999998pt/" style="max-width:100%;">
+                        </a>, the metric for evaluation is defined as:</p>
+                    <p>
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/018be30b8309099b896cd42416be3b8e.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/018be30b8309099b896cd42416be3b8e.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="301.6598706pt" height="24.65753399999998pt/" style="max-width:100%;">
+                        </a>
+                    </p>
+                    <p>
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/1629da9a7c204376b2258a5a391a9574.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/1629da9a7c204376b2258a5a391a9574.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="352.0340406pt" height="24.65753399999998pt/" style="max-width:100%;">
+                        </a>
+                    </p>
+                    <p>where
+                        <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&amp;sanitize=true">
+                            <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/dbc3312b32770329001dc37e78afdd3a.svg?invert_in_darkmode&amp;sanitize=true"
+                                align="middle" width="33.60263774999999pt" height="24.65753399999998pt/" style="max-width:100%;">
+                        </a> is the quaternions representation of the Euler angle
+                        <code>row, pitch, yall</code>
+                    </p>
+                    <p class="title-1 mt60" id="to_rules_href">6 · Rules of ranking</p>
+                    <p>Result benchmark will be:</p>
+                    <table class="github_table">
+                        <thead>
+                            <tr>
+                                <th>Method</th>
+                                <th align="center">mean</th>
+                                <th align="center">scene1</th>
+                                <th align="center">scene2</th>
+                                <th align="center">scene3</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Deepxxx</td>
+                                <td align="center">xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="14.433101099999991pt" height="14.15524440000002pt/" style="max-width:100%;">
+                                    </a>, xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="6.735194399999992pt" height="22.63850490000001pt/" style="max-width:100%;">
+                                    </a>
+                                </td>
+                                <td align="center">xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="14.433101099999991pt" height="14.15524440000002pt/" style="max-width:100%;">
+                                    </a>, xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="6.735194399999992pt" height="22.63850490000001pt/" style="max-width:100%;">
+                                    </a>
+                                </td>
+                                <td align="center">xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="14.433101099999991pt" height="14.15524440000002pt/" style="max-width:100%;">
+                                    </a>, xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="6.735194399999992pt" height="22.63850490000001pt/" style="max-width:100%;">
+                                    </a>
+                                </td>
+                                <td align="center">xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/0e51a2dede42189d77627c4d742822c3.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="14.433101099999991pt" height="14.15524440000002pt/" style="max-width:100%;">
+                                    </a>, xx
+                                    <a target="_blank" href="https://github.com/ApolloScapeAuto/dataset-api/blob/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true">
+                                        <img src="https://github.com/ApolloScapeAuto/dataset-api/raw/master/self_localization/tex/a17fe79641dc49ee31882d6a409221dc.svg?invert_in_darkmode&amp;sanitize=true"
+                                            align="middle" width="6.735194399999992pt" height="22.63850490000001pt/" style="max-width:100%;">
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>Our ranking will determined by number of winning metrics from all scenes.</p>
+                    <p class="title-1 mt60" id="to_submission_href">7 · Submission of data format</p>
+                    <p>Please follow the data format under
+                        <code>test_eval_data/</code> for example.</p>
+                    <ul>
+                        <li>Example dir tree of submitted zip file</li>
+                    </ul>
+                    <div class="highlight highlight-source-shell">
+                        <pre>├── <span class="pl-c1">test</span>
+                │   ├── scene1
+                │   │   ├── sequence1.txt
+                │   │   ├── sequence2.txt
+                │   │    ...
+                │   ├── scene2
+                │   │   ├── sequence1.txt
+                │   │   ├── sequence2.txt
+                ...</pre>
+                    </div>
+                    <ul>
+                        <li>Example format of
+                            <code>sequence1.txt</code>
+                        </li>
+                    </ul>
+                    <div class="highlight highlight-source-shell">
+                        <pre>image_name1 roll,pitch,yaw,x,y,z
+                image_name2 roll,pitch,yaw,x,y,z
+                image_name3 roll,pitch,yaw,x,y,z
+                image_name4 roll,pitch,yaw,x,y,z
+                image_name5 roll,pitch,yaw,x,y,z</pre>
+                    </div>
+                    <p>Here
+                        <code>roll,pitch,yaw,x,y,z</code> are
+                        <code>float32</code> numbers</p>
+                </article>
+            <div class="eccv">
+                <a class="task-submission-btn submit_achievement">
+                    Participate
+                </a>
+                <a class="task-submission-btn leader_board" href="/ECCV/selfboard.html" target="_Blank">
+                    LeaderBoard
+                </a>
+            </div>
+<div class="mt60" style="font-size: 18px;text-align: center;">The dataset we released is &nbsp;desensitized street view &nbsp;for academic use only.</div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/dataset_self_localization.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+
+</html>

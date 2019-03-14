@@ -1,0 +1,14 @@
+{
+    "dev": {
+        "loginUrl": "http://passport.rdtest.baidu.com/passApi/js/uni_login_wrapper.js",
+        "logout": " https://passport.rdtest.baidu.com/?logout"
+    },
+    "production": {
+        "loginUrl": "http://passport.bdimg.com/passApi/js/uni_login_wrapper.js",
+        "logout": "https://passport.baidu.com/?logout"
+    },
+    "qa": {
+        "loginUrl": "http://passport.qatest.baidu.com/passApi/js/uni_login_wrapper.js",
+        "logout": " https://passport.qatest.baidu.com/?logout"
+    }
+}

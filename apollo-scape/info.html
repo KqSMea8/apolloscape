@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" href="/css/info/intlTelInput.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/info/info.css">
+
+</head>
+
+<body>
+    <section class="main-wrapper">
+        <div class="info-bg">
+            <div class="info-right">
+                <form id="upInfo" method="post" action="/server/user/upinfo">
+                <div class="content" id="form-container">
+                    
+                    <div class="container">
+                        <div class="title fl">完善信息</div>
+                        <div class="title-bg fl"></div>
+                        <div class="cb"></div>
+                    </div>
+                    <div class="brief">
+                        欢迎登陆，ID8123810293，完善信息即可获得数据下载及参与挑战权限
+                    </div>
+                    <div class="container">
+                        <div class="info-input" id="email_input">
+                            邮箱：<input type="input" id="email" name="email" placeholder="请输入您的邮箱">
+                        </div>
+                        <div class="input-error" id="email_error">
+                            请输入正确邮箱格式
+                        </div>
+                        <div class="info-input">
+                            电话：<input type="tel" id="phone" name="phone" placeholder="+86">
+                        </div>
+                        <div class="info-input">
+                            机构：<input type="input" id="organization" name="organization" placeholder="请填写您所在的机构">
+                        </div>
+                        <div class="submit-btn" id="submit_btn">
+                            <a>确认提交</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                </form>
+            </div>
+            <div class="info-left">
+                <img src="/public/img/login/right-line.png">
+            </div>
+        </div>
+        <div class="info-ban" id="info-ban">
+            <!--
+            <p class="title">ApolloScape</p>
+            <p class="sub_title">自动驾驶前沿技术及配套数据集</p>
+            <p class="brief">CVPR2018 Workshop on autonomous driving</p>
+            <p class="brief">Autonomous driving is becoming the most attractive application of computer vision,</p>
+            <p class="brief">with a huge market and a high demand for robust and distributable algorithms. </p>
+            <div class="hr"></div>
+            -->
+        </div>
+    </section>
+    <div class="done-load"></div>
+    <script type="text/javascript" src="/js/intlTelInput.min.js"></script>
+    <script type="text/javascript" src="/js/info.js"></script>
+    
+</body>
+</html>

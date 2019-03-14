@@ -1,0 +1,100 @@
+<!-- htmlcs-disable  -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="stylesheet" type="text/css" href="/common/bootstrap/bootstrap.css">
+    
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/self/index.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 750px)" href="/css/self/m-index.css">
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="main-wrapper">
+        <div class="main">
+            <div class="left-content-wrapper">
+
+                <div class="left-content-item">
+                    <h3>Leaderboard <span class="head-text-small">Self Localization</span></h3>
+
+                </div>
+
+                <div class="left-content-item">
+                    <div class="schedule-wrapper" id="self">
+                        <div class="rank-table-wrapper">
+                            <div class="rank-table global-rank">
+                                <div class="rank-head">
+                                    <div class="rank-head-tr">
+                                        <div class="rank-th rank-th-lane">
+                                            Rank
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            Method
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            Mean
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            Time
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            Team Name
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rank-table-body self-body">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <link rel="import" href="./common/right-menu.html?__inline">
+        </div>
+    </section>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+<script type="text/javascript" src="/js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="/common/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+    /* eslint-disable */
+    $.getJSON("/server/eccv/leaderboard/?taskId=self-localization",function(result){
+        var selfLocalization = result.data['self-localization'];
+
+
+        $.each(selfLocalization, function (c, selfAchievement) {
+            if (selfAchievement.result) {
+                var iou = $.parseJSON(selfAchievement.result);
+                var score = iou.score;
+            }
+
+            var selfTrH = '<div class="rank-tr" id="car-' + c + '">';
+            if (selfAchievement.status === "3") {
+                var selfTr  = '<div class="rank-td rank-td-lane">' + selfAchievement.rank + '</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.method_name + '</div>' + '<div class="rank-td rank-td-lane">' + score + '</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.created_at + '</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.team_name + '</div>';
+            }
+            if (selfAchievement.status === "0" || selfAchievement.status === "2") {
+                var selfTr  = '<div class="rank-td rank-td-lane">-</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.method_name + '</div>' + '<div class="rank-td rank-td-lane">-</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.created_at + '</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.team_name + '</div>';
+            }
+            if (selfAchievement.status === "1") {
+                var selfTr  = '<div class="rank-td rank-td-lane fail-text">fail</div>' + '<div class="rank-td rank-td-lane">' +selfAchievement.method_name + '</div>' + '<div class="rank-td rank-td-lane fail-text">fail</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.created_at + '</div>' + '<div class="rank-td rank-td-lane">' + selfAchievement.team_name + '</div>';
+            }
+            var selfTrT = '</div>';
+
+            var selfHtml = selfTrH + selfTr + selfTrT;
+            $(".self-body").append(selfHtml);
+        });
+
+
+    });
+
+
+</script>
+</html>

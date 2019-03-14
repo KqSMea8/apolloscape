@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/scene.css">    
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container"></div>
+        <!--
+        <div class="main banner-inner tl">
+            <p class="ban-title-one">ApolloScape场景解析数据集</p>
+            <div class="ban-brief">
+                <p>CVPR2018 Workshop on autonomous driving</p>
+                <p>Autonomous driving is becoming the most attractive application of computer vision, </p>
+                <p>with a huge market and a high demand for robust and distributable algorithms. </p>
+            </div>
+            <p class="ban-brief-hr"  id="to_intro_href"></p>
+        </div>
+        -->
+    </section>
+    
+    <section class="main-wrapper">
+        <div class="main scene-body" id="scene-container">
+            <!--
+            <div class="menu fl">
+                <ul>
+                    <li class="menu-1 to_btn" id="to_intro">1·介绍</li>
+                    <li class="menu-1 to_btn" id="to_data">2·数据集说明</li>
+                    <li class="menu-2 to_btn" id="to_collection">传感器与数据采集</li>
+                    <li class="menu-2 to_btn" id="to_category">数据集类别定义</li>
+                    <li class="menu-2 to_btn" id="to_general">数据概括</li>
+                    <li class="menu-2 to_btn" id="to_brief">数据简介</li>
+                    <li class="menu-1 to_btn" id="to_demo">3·数据集示例</li>
+                    <li class="menu-1 to_btn" id="to_down">4·数据集下载</li>
+                    <li class="menu-1 to_btn" id="to_submit">5·评估与提交</li>
+                    <li class="menu-2 to_btn" id="to_standard">评测标准</li>
+                    <li class="menu-2 to_btn" id="to_requirements">提交要求</li>
+                </ul>
+            </div>
+            <div class="content fl">
+                <p class="title-1 mt60" id="to_data_href">1 · 介绍</p>
+                <p class="word-1 mt20"  id="to_collection_href">我们的场景解析是旨在为推动自动驾驶技术的研发提供的一个大规模的开放数据集。 我们的数据集将包括长达百万帧的高分辨率RGB视频和与其对应的逐像素语义标注，还提供了具有语义分割的测量级别的稠密点云、紧急情况的立体视频以及立体全景图像。我们将持续采集更多不同环境、天气和交通条件下的数据，致力于为全世界的研究者提供更为实用的数据资源。</p>
+                <p class="title-1 mt60" id="to_category_href">2 · 数据集说明</p>
+                <p class="title-2 mt40">传感器与数据采集</p>
+                <p class="word-1 mt10">我们采用装备有RIEGL VMX-1HA移动测绘系统的中尺寸多功能越野车进行数据采集。该系统包括有两个LiDAR传感器（每秒500条扫描线，覆盖420米内的360度视角）、一部INS/GNSS单元以及两个前向相机（VMX-CS6, 3384 x 2710）。数据的采集频率为每米一张图像。</p>
+                <p class="title-2 mt20">数据集类别定义</p>
+                <p class="word-1 mt10"  id="to_general_href">我们共定义了26个语义类，其中21个类别将用于评测。表一为这些类的定义:</p>
+                <table class="mt10">
+                    <tr>
+                        <td>组别</td>
+                        <td>类别</td>
+                        <td>类ID</td>
+                        <td>颜色（RGB）</td>
+                        <td>备注</td>
+                    </tr>
+                    <tr>
+                        <td>移动物体</td>
+                        <td>小汽车</td>
+                        <td>33</td>
+                        <td>(0, 0,142)</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>摩托车</td>
+                        <td>34</td>
+                        <td>(0, 0,230)</td>
+                        <td>无驾驶员的静止车辆</td>
+                    </tr>
+                </table>
+                <p class="title-2 mt20" id="to_brief_href">数据概括</p>
+                <p class="word-1 mt10">我们提供了200000张图像，分为训练集和测试集两部分。训练集用于设计算法和训练模型，其中包括17062张图像和相对应的语义标注与深度信息。测试集包括1973张图像与相对应的深度信息，测试集的语义标注图像将用于内部测试，不提供下载。测试集的目录结构除了将train替换为test，与训练集一致。</p>
+                <p class="title-2 mt20" >数据简介</p>
+                <p class="word-1 mt10">Total number of training RGB images: 17,062</p>
+                <p class="word-1">Total number of training depth images: 17,062</p>
+                <p class="word-1">Total number of testing RGB images: 1,973</p>
+                <p class="word-1">Total number of testing depth images: 1,973</p>
+                <p class="word-1">Total number of classes: 27</p>
+                <p class="word-1">Total number of classes for challenge: 21Image resolution: 3384 x 2710</p>
+                <p class="word-1">GPS trajectories: Yes</p>
+                <p class="word-1" id="to_demo_href">Camera intrinsic and extrinsic parameters: Yes</p>
+                <p class="word-1">Interval between two image frames: 1 meter</p>
+                <p class="word-1">Point clouds: (coming soon)</p>
+                <p class="title-1 mt60">3 · 数据集示例</p>
+                <div class="fl mt20 demo" >
+                    <img src="/public/img/scene/demo-1.png" class="demo-1">
+                    <p>深度图</p>
+                </div>
+                <div class="demo fl mt20">
+                    <img src="/public/img/scene/demo-2.png" class="demo-2">
+                    <p  id="to_down_href">点云示例</p>
+                </div>
+                <div class="cb"></div>
+                <p class="mt60 title-1">4 · 数据集下载</p>
+                <p class="mt20 word-1">Note: All photos can only be used for educational purpose by individuals or organizations. Commercial use or other violations of copyright law are not permitted.</p>
+                <div class="down_list mt20" id="to_submit_href">
+                    <a class="down_btn fl mr10" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl mr10" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl mr10" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl mr10" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                    <a class="down_btn fl mr10" id="SceneParsing_test_depth">SceneParsing_test_depth.tar</a>
+                </div>
+                <div class="cb"></div>
+                <p class="mt50 title-1"  id="to_standard_href">5 · 评测与提交</p>
+                <p class="mt40 title-2">评测标准</p>
+                <p class="word-1 mt10"  id="to_requirements_href">我们评测的第一个任务是逐像素的语义分割算法。我们采用intersection-over-union (IoU)作为测试标准来评估算法在测试集上的性能。算法的整体性能（如mean IoU）和在不同语义类别上的表现将显示在我们的排行榜上。IOU的计算公式为TP / (TP + FP + FN)，其中TP、FP和FN分别对应为真阳性像素数量、假阳性像素数量和假阴性像素数量。</p>
+                <p class="word-1">[1] M. Everingham, A. S. M. Eslami, L. Van Gool, C. K. I. Williams, J. Winn, and A. Zisserman, "The Pascal Visual Object Classes challenge: A retrospective," IJCV, vol. 111, iss. 1, 2014.</p>
+                <p class="title-2 mt20">提交要求</p>
+                <p class="word-1 mt10">
+                    我们正在Kaggle社区举办CVPR Workshop on Autonomous Driving 挑战赛。
+                    <a href="#">前往提交>></a></p>
+            </div>
+            <div class="cb"></div>
+            -->
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+        <!--
+        <div class="content">
+            <div class="title">
+                <span>开发者协议</span>
+                <a id="close_protocol" class="fr"></a>
+            </div>
+            <div class="cb"></div>
+            <div class="protocol_text">
+                <p>本《开发者协议》（“本协议”）适用于您（“开发者”）对百度及其关联方（“我方”）网站、产品、服务、应用及开放存取数据集（合称“服务”）的访问及使用。请仔细阅读本协议，若开发者对本协议有任何疑问，请与我方联系。若开发者采取任何方式访问或使用服务，则表示开发者同意受本协议约束：</p>
+                <p>This Developer Agreement (this “Agreement”) governs your (“Developer”) access to and use of the websites, products, services, applications and open-access data sets (collectively, the “Service”) of Baidu and its affiliates (“we,” “us” or “ours”). Please read this Agreement carefully, and contact us if the Developer has any questions regarding this Agreement. Any access to or use of the Services indicates that the Developer agrees to be bound by this Agreement.</p>
+                <p>&nbsp;</p>
+                <p>1 开发者的一般义务 </p>
+                <p>1 General Obligations of the Develope</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+            </div>
+            <div class="hr"></div>
+            <a class="agree_btn agree_btn_no fl">我已阅读并同意上述条款与条件</a>
+            <a class="submit_btn fr">确认</a>
+        </div>
+        -->
+        
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/scene.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

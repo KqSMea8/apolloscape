@@ -1,0 +1,291 @@
+{
+  "requires": true,
+  "lockfileVersion": 1,
+  "dependencies": {
+    "amdefine": {
+      "version": "1.0.1",
+      "resolved": "http://pnpm.baidu.com/amdefine/-/amdefine-1.0.1.tgz",
+      "integrity": "sha1-SlKCrBZHKek2Gbz9OtFR+BfOkfU="
+    },
+    "async": {
+      "version": "0.2.10",
+      "resolved": "http://pnpm.baidu.com/async/-/async-0.2.10.tgz",
+      "integrity": "sha1-trvgsGdLnXGXCMo43owjfLUmw9E="
+    },
+    "camel-case": {
+      "version": "1.2.2",
+      "resolved": "http://pnpm.baidu.com/camel-case/-/camel-case-1.2.2.tgz",
+      "integrity": "sha1-Gsp8TRlTWaLOmVV5NDPG5VQlEfI=",
+      "requires": {
+        "sentence-case": "1.1.3",
+        "upper-case": "1.1.3"
+      }
+    },
+    "camelcase": {
+      "version": "1.2.1",
+      "resolved": "http://pnpm.baidu.com/camelcase/-/camelcase-1.2.1.tgz",
+      "integrity": "sha1-m7UwTS4LVmmLLHWLCKPqqdqlijk="
+    },
+    "change-case": {
+      "version": "2.1.6",
+      "resolved": "http://pnpm.baidu.com/change-case/-/change-case-2.1.6.tgz",
+      "integrity": "sha1-UUryBRMVimj+fwDf9MMy1sKY0vk=",
+      "requires": {
+        "camel-case": "1.2.2",
+        "constant-case": "1.1.2",
+        "dot-case": "1.1.2",
+        "is-lower-case": "1.1.3",
+        "is-upper-case": "1.1.2",
+        "lower-case": "1.1.4",
+        "param-case": "1.1.2",
+        "pascal-case": "1.1.2",
+        "path-case": "1.1.2",
+        "sentence-case": "1.1.3",
+        "snake-case": "1.1.2",
+        "swap-case": "1.1.2",
+        "title-case": "1.1.2",
+        "upper-case": "1.1.3",
+        "upper-case-first": "1.1.2"
+      }
+    },
+    "clean-css": {
+      "version": "2.2.23",
+      "resolved": "http://pnpm.baidu.com/clean-css/-/clean-css-2.2.23.tgz",
+      "integrity": "sha1-BZC1R4tRbEkD7cLYm9P9vdKGMow=",
+      "requires": {
+        "commander": "2.2.0"
+      }
+    },
+    "cli": {
+      "version": "0.6.6",
+      "resolved": "http://pnpm.baidu.com/cli/-/cli-0.6.6.tgz",
+      "integrity": "sha1-Aq1Eo4Cr8nraxebwzdewQ9dMU+M=",
+      "requires": {
+        "exit": "0.1.2",
+        "glob": "3.2.11"
+      }
+    },
+    "commander": {
+      "version": "2.2.0",
+      "resolved": "http://pnpm.baidu.com/commander/-/commander-2.2.0.tgz",
+      "integrity": "sha1-F1rUuTF/P/YV8gHB5XIk9Vo+kd8="
+    },
+    "constant-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/constant-case/-/constant-case-1.1.2.tgz",
+      "integrity": "sha1-jsLKW6ND4Aqjjb9OIA/VrJB+/WM=",
+      "requires": {
+        "snake-case": "1.1.2",
+        "upper-case": "1.1.3"
+      }
+    },
+    "decamelize": {
+      "version": "1.2.0",
+      "resolved": "http://pnpm.baidu.com/decamelize/-/decamelize-1.2.0.tgz",
+      "integrity": "sha1-9lNNFRSCabIDUue+4m9QH5oZEpA="
+    },
+    "dot-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/dot-case/-/dot-case-1.1.2.tgz",
+      "integrity": "sha1-HnOCaQDeKNbeVIC8HeMdCEKwa+w=",
+      "requires": {
+        "sentence-case": "1.1.3"
+      }
+    },
+    "exit": {
+      "version": "0.1.2",
+      "resolved": "http://pnpm.baidu.com/exit/-/exit-0.1.2.tgz",
+      "integrity": "sha1-BjJjj42HfMghB9MKD/8aF8uhzQw="
+    },
+    "fis-optimizer-html-minifier": {
+      "version": "0.0.9",
+      "resolved": "http://pnpm.baidu.com/fis-optimizer-html-minifier/-/fis-optimizer-html-minifier-0.0.9.tgz",
+      "integrity": "sha1-qE7SEWVAOAdKPyUxdlWxZCfKv4g=",
+      "requires": {
+        "html-minifier": "0.6.5"
+      }
+    },
+    "glob": {
+      "version": "3.2.11",
+      "resolved": "http://pnpm.baidu.com/glob/-/glob-3.2.11.tgz",
+      "integrity": "sha1-Spc/Y1uRkPcV0QmH1cAP0oFevj0=",
+      "requires": {
+        "inherits": "2.0.3",
+        "minimatch": "0.3.0"
+      }
+    },
+    "html-minifier": {
+      "version": "0.6.5",
+      "resolved": "http://pnpm.baidu.com/html-minifier/-/html-minifier-0.6.5.tgz",
+      "integrity": "sha1-5dytaNdgsIru2LfaPoy8C8N7ACs=",
+      "requires": {
+        "change-case": "2.1.6",
+        "clean-css": "2.2.23",
+        "cli": "0.6.6",
+        "uglify-js": "2.4.24"
+      }
+    },
+    "inherits": {
+      "version": "2.0.3",
+      "resolved": "http://pnpm.baidu.com/inherits/-/inherits-2.0.3.tgz",
+      "integrity": "sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4="
+    },
+    "is-lower-case": {
+      "version": "1.1.3",
+      "resolved": "http://pnpm.baidu.com/is-lower-case/-/is-lower-case-1.1.3.tgz",
+      "integrity": "sha1-fhR75HaNxGbbO/shzGCzHmrWk5M=",
+      "requires": {
+        "lower-case": "1.1.4"
+      }
+    },
+    "is-upper-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/is-upper-case/-/is-upper-case-1.1.2.tgz",
+      "integrity": "sha1-jQsfp+eTOh5YSDYA7H2WYcuvdW8=",
+      "requires": {
+        "upper-case": "1.1.3"
+      }
+    },
+    "lower-case": {
+      "version": "1.1.4",
+      "resolved": "http://pnpm.baidu.com/lower-case/-/lower-case-1.1.4.tgz",
+      "integrity": "sha1-miyr0bno4K6ZOkv31YdcOcQujqw="
+    },
+    "lru-cache": {
+      "version": "2.7.3",
+      "resolved": "http://pnpm.baidu.com/lru-cache/-/lru-cache-2.7.3.tgz",
+      "integrity": "sha1-bUUk6LlV+V1PW1iFHOId1y+06VI="
+    },
+    "minimatch": {
+      "version": "0.3.0",
+      "resolved": "http://pnpm.baidu.com/minimatch/-/minimatch-0.3.0.tgz",
+      "integrity": "sha1-J12O2qxPG7MyZHIInnlJyDlGmd0=",
+      "requires": {
+        "lru-cache": "2.7.3",
+        "sigmund": "1.0.1"
+      }
+    },
+    "param-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/param-case/-/param-case-1.1.2.tgz",
+      "integrity": "sha1-3LCRpDwlm5Io8cNB57akTqC/l0M=",
+      "requires": {
+        "sentence-case": "1.1.3"
+      }
+    },
+    "pascal-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/pascal-case/-/pascal-case-1.1.2.tgz",
+      "integrity": "sha1-Pl1kogBDgwp8STRMLXS0G+DJyZs=",
+      "requires": {
+        "camel-case": "1.2.2",
+        "upper-case-first": "1.1.2"
+      }
+    },
+    "path-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/path-case/-/path-case-1.1.2.tgz",
+      "integrity": "sha1-UM5roNO+090LXCqcRVNpdDRAlRQ=",
+      "requires": {
+        "sentence-case": "1.1.3"
+      }
+    },
+    "sentence-case": {
+      "version": "1.1.3",
+      "resolved": "http://pnpm.baidu.com/sentence-case/-/sentence-case-1.1.3.tgz",
+      "integrity": "sha1-gDSq/CFFdy06vhUJqkLJ4QQtwTk=",
+      "requires": {
+        "lower-case": "1.1.4"
+      }
+    },
+    "sigmund": {
+      "version": "1.0.1",
+      "resolved": "http://pnpm.baidu.com/sigmund/-/sigmund-1.0.1.tgz",
+      "integrity": "sha1-P/IfGYytIXX587eBhT/ZTQ0ZtZA="
+    },
+    "snake-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/snake-case/-/snake-case-1.1.2.tgz",
+      "integrity": "sha1-DC8l4wUVjZoY09l3BmGH/vilpmo=",
+      "requires": {
+        "sentence-case": "1.1.3"
+      }
+    },
+    "source-map": {
+      "version": "0.1.34",
+      "resolved": "http://pnpm.baidu.com/source-map/-/source-map-0.1.34.tgz",
+      "integrity": "sha1-p8/omux7FoLDsZjQrPtH19CQVms=",
+      "requires": {
+        "amdefine": "1.0.1"
+      }
+    },
+    "swap-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/swap-case/-/swap-case-1.1.2.tgz",
+      "integrity": "sha1-w5IDpFhzhfrTyFCgvRvK+ggZdOM=",
+      "requires": {
+        "lower-case": "1.1.4",
+        "upper-case": "1.1.3"
+      }
+    },
+    "title-case": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/title-case/-/title-case-1.1.2.tgz",
+      "integrity": "sha1-+uSmrlRr+iLQg6DuqRCkDRLtT1o=",
+      "requires": {
+        "sentence-case": "1.1.3",
+        "upper-case": "1.1.3"
+      }
+    },
+    "uglify-js": {
+      "version": "2.4.24",
+      "resolved": "http://pnpm.baidu.com/uglify-js/-/uglify-js-2.4.24.tgz",
+      "integrity": "sha1-+tV1XB4Vd2WLsG/5q25UjJW+vW4=",
+      "requires": {
+        "async": "0.2.10",
+        "source-map": "0.1.34",
+        "uglify-to-browserify": "1.0.2",
+        "yargs": "3.5.4"
+      }
+    },
+    "uglify-to-browserify": {
+      "version": "1.0.2",
+      "resolved": "http://pnpm.baidu.com/uglify-to-browserify/-/uglify-to-browserify-1.0.2.tgz",
+      "integrity": "sha1-bgkk1r2mta/jSeOabWMoUKD4grc="
+    },
+    "upper-case": {
+      "version": "1.1.3",
+      "resolved": "http://pnpm.baidu.com/upper-case/-/upper-case-1.1.3.tgz",
+      "integrity": "sha1-9rRQHC7EzdJrp4vnIilh3ndiFZg="
+    },
+    "upper-case-first": {
+      "version": "1.1.2",
+      "resolved": "http://pnpm.baidu.com/upper-case-first/-/upper-case-first-1.1.2.tgz",
+      "integrity": "sha1-XXm+3P8UQZUY/S7bCgUHybaFkRU=",
+      "requires": {
+        "upper-case": "1.1.3"
+      }
+    },
+    "window-size": {
+      "version": "0.1.0",
+      "resolved": "http://pnpm.baidu.com/window-size/-/window-size-0.1.0.tgz",
+      "integrity": "sha1-VDjNLqk7IC76Ohn+iIeu58lPnJ0="
+    },
+    "wordwrap": {
+      "version": "0.0.2",
+      "resolved": "http://pnpm.baidu.com/wordwrap/-/wordwrap-0.0.2.tgz",
+      "integrity": "sha1-t5Zpu0LstAn4PVg8rVLKF+qhZD8="
+    },
+    "yargs": {
+      "version": "3.5.4",
+      "resolved": "http://pnpm.baidu.com/yargs/-/yargs-3.5.4.tgz",
+      "integrity": "sha1-2K/49mXpTDS9JZvevRv68N3TU2E=",
+      "requires": {
+        "camelcase": "1.2.1",
+        "decamelize": "1.2.0",
+        "window-size": "0.1.0",
+        "wordwrap": "0.0.2"
+      }
+    }
+  }
+}

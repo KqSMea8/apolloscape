@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" type="text/css" href="/css/home/index.css">
+    <link rel="stylesheet" href="/public/third_party/swiper/swiper.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+    <div class="swiper-container">
+        <div class="swiper-wrapper" id="banner-container">
+            <div class="swiper-slide banner-content-bg-one">
+                <div class="banner-content">
+                    <!-- <div class="main banner-inner tl lang-cn">
+                        <p class="ban-title-one">ApolloScape</p>
+                        <p class="ban-title-two">自动驾驶前沿开放式工具及数据集</p>
+                        <div class="ban-brief">
+                            <p>ApolloScape是阿波罗自动驾驶项目的一个研究型项目，旨在促进自动驾驶的各方面创新。</p>
+                            <p>它开放对像素级标注的场景解析数据集和仿真工具的访问。</p>
+                            <p>这是一个不断发展的项目，将定期添加新的数据集和新功能。</p>
+                            <p>将举办各种研讨会和挑战，鼓励交流想法，共同推动自主驾驶研究的先进技术。</p>
+                        </div>
+                    </div> -->
+                    <div class="main banner-inner tl lang-en">
+                        <p class="ban-title-one">ApolloScape</p>
+                        <p class="ban-title-two">Advanced Open Tools and Datasets for Autonomous Driving</p>
+                        <div class="ban-brief">
+                            <p>ApolloScape , part of the Apollo project for autonomous driving, is a research-oriented project to foster innovations in all aspects of autonomous driving, from perception, navigation, to control. It hosts open access to semantically annotated (pixel-level) street view images and simulation tools that supports user-defined polices. It is an evolving project that new datasets and new capability will be added regularly. Various workshops and challenges will be hosted to encourage exchanges of ideas and jointly advance the state of the art in autonomous driving research. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide banner-content-bg-two">
+                <div class="banner-content">
+                    <!-- <div class="main banner-inner tl lang-cn">
+                        <p class="ban-title-one">CVPR 2018</p>
+                        <p class="ban-title-two">自动驾驶研讨会：感知挑战赛</p>
+                        <div class="ban-brief">
+                            <p>我们在CVPR 2018的自动驾驶研讨会中，主持了一项挑战。基于我们准备的精细标注的大规模数据集，定义了一组真实问题，了解计算机视觉算法在街景自动驾驶环境感知问题方面的现状，并鼓励新的算法发明。</p>
+                            <a href="http://wad.ai/challenge.html" class="ban-brief-btn" target="_blank">Wad.AI 挑战赛</a>
+                        </div>
+                    </div> -->
+                    <div class="main banner-inner tl lang-en">
+                        <p class="ban-title-one">CVPR 2018</p>
+                        <p class="ban-title-two">Workshop on Autonomous Driving</p>
+                        <div class="ban-brief">
+                            <p>In the CVPR 2018, Workshop on Autonomous Driving，We host a challenge to understand the current status of computer vision algorithms in solving the environmental perception problems for autonomous driving. In this challenge, we have prepared a number of large scale datasets with fine annotation. Based on the datasets, we have define a set of realistic problems and encourage new algorithms and pipelines to be invented for autonomous driving, rather than applied on autonomous driving.</p>
+                            <a href="http://wad.ai/challenge.html" class="ban-brief-btn" target="_blank" style="width:180px;">Wad.AI Challenge</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-slide banner-content-bg-three">
+                <div class="banner-content">
+                    <div class="main banner-inner tl lang-cn">
+                        <p class="ban-title-one">IV 2018</p>
+                        <p class="ban-title-two">智能汽车研讨会：智能仿真与导航</p>
+                        <div class="ban-brief">
+                            <p>我们与IV 2018(The 2018 IEEE Intelligent Vehicles Symposium)，联合举办了智能汽车研讨会：智能仿真与导航，关注目前最先进的智能驾驶仿真技术。</p>
+                            <a href="http://www.2018iv.org/SS07.html" class="ban-brief-btn" target="_blank">IV 2018</a>
+                        </div>
+                    </div>
+                    <div class="main banner-inner tl lang-en">
+                        <p class="ban-title-one">IV 2018</p>
+                        <p class="ban-title-two">IEEE ：Intelligent Simulation and Navigation</p>
+                        <div class="ban-brief">
+                            <p>We co-hosted a simulation workshop： Simulation and Navigation for Intelligent Vehicles，with IV 2018 (The 2018 IEEE Intelligent Vehicles Symposium). Focus on the most advanced intelligent driving simulation technologies.</p>
+                            <a href="http://www.2018iv.org/SS07.html" class="ban-brief-btn" target="_blank" style="width:180px;">IV 2018</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <section class="main-wrapper pc-container">
+        <div class="main" id="intro-container">
+            <!--
+            <div class="home-intro">
+                <div class="left-content-item fl">
+                    <div class="title">
+                        场景分析
+                    </div>
+                    <div class="content">
+                        <p>
+                            大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频和与其对应的逐像素语义标注、稠密点云、立体图像、立体全景图像，将持续采集更多不同环境、天气和交通条件下的数据，致力于为全世界的研究者提供更为实用的数据资源及评估标准。
+                        </p>
+                    </div>
+                    <a href="sence.html" class="btn">查看详情</a>
+                </div>
+                <div class="right-content-item fl">
+                    <div class="back">
+                        <img src="/public/img/index/intro-scene.png" class="intro-img">
+                    </div>
+                </div>
+                <div class="cb"></div>
+            </div>
+
+            <div class="home-intro">
+                <div class="left-content-item fl">
+                    <div class="title">
+                        智能仿真
+                    </div>
+                    <div class="content">
+                        <p>
+                            大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频和与其对应的逐像素语义标注、稠密点云、立体图像、立体全景图像，将持续采集更多不同环境、天气和交通条件下的数据，致力于为全世界的研究者提供更为实用的数据资源及评估标准。大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频。
+                        </p>
+                    </div>
+                    <a href="sence.html" class="btn">查看详情</a>
+                </div>
+                <div class="right-content-item fl">
+                    <div class="back">
+                        <img src="/public/img/index/intro-simulation.png" class="intro-img">
+                    </div>
+                </div>
+                <div class="cb"></div>
+            </div>
+
+            <div class="home-more">更多内容敬请期待</div>
+            -->
+        </div>
+    </section>
+
+    <section class="main-wrapper pc-container">
+         <div class="main">
+            <div class="home-member" id="home-member">
+                <!--
+                <div class="home-member-title">ApolloScape 委员会</div>
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+                <div class="home-member-item fl">
+                    <div class="fl">
+                        <img src="/public/img/index/member-1.png" class="member-image">
+                    </div>
+                    <div class="fl">
+                        <div class="member-name">Geiger, Andreas</div>
+                        <div class="member-from">MPI/ETH-Zurich</div>
+                        <div class="member-intro">
+                            He is a Max Planck Research Group Leader at the MPI for Intelligent Systems in Tübingen and a Visiting Professor at ETH Zürich, KITTI author.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cb"></div>
+                -->
+            </div>
+         </div>
+    </section>
+    <section class="main-wrapper pc-container">
+        <div class="main">
+            <div class="update-log" id="update-log">
+                <!-- <div class="home-member-title">更新日志</div>
+                <div class="update-log-itme">
+                    <div class="home-member-title-2">场景解析</div>
+                    <ul>
+                        <li>
+                            2018.03.08  正式发布了数据集第一部分，包含74555帧视频图像序列及对应的逐像素标注和姿态文件
+                        </li>
+                        <li>
+                            2018.03.21  首次开放深度图像，更新了数据集43592帧静态背景深度图像（Road01_ins_depth和Road02_ins_depth）
+                        </li>
+                        <li>
+                            2018.03.29  补充深度图像，更新了数据集30963帧静态背景深度图像（Road03_ins_depth和Road04_ins_depth）
+                        </li>
+                    </ul>
+                </div> -->
+            </div>
+         </div>
+    </section>
+
+    <section class="mobile-container">
+        <div class="mobile-banner" id="mobile-banner">
+            <!--
+            <div class="title">
+                ApolloScape
+            </div>
+            <div class="sub-title">
+                自动驾驶前沿技术及配套数据集
+            </div>
+            -->
+        </div>
+        <div id="mobile-intro-container">
+            <!--
+            <div class="mobile-intro">
+                <div class="title">场景解析</div>
+                <div class="brief">&nbsp;&nbsp;&nbsp;&nbsp;大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频和与其对应的逐像素语义标注、稠密点云、立体图像、立体全景图像，将持续采集更多不同环境、天气和交通条件下的数据，致力于为全世界的研究者提供更为实用的数据资源及评估标准。</div>
+                <div class="back"><img src="/public/img/index/intro-scene.png" class="intro-img"></div>
+            </div>
+            <div class="mobile-intro">
+                <div class="title">智能仿真</div>
+                <div class="brief">&nbsp;&nbsp;&nbsp;&nbsp;大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频和与其对应的逐像素语义标注、稠密点云、立体图像、立体全景图像，将持续采集更多不同环境、天气和交通条件下的数据，致力于为全世界的研究者提供更为实用的数据资源及评估标准。大规模的开放数据集，旨在推动自动驾驶技术研发:包括长达百万帧的高分辨率RGB视频。</div>
+                <div class="back">
+                    <img src="/public/img/index/intro-simulation.png" class="intro-img">
+                </div>
+            </div>
+            -->
+        </div>
+        <div class="mobile-member">
+            <div class="title" id="mobile-member-title"><!--ApolloScape 委员会--></div>
+            <div id="mobile-member-container">
+                <!--
+                <div class="item">
+                    <div class="fl">
+                        <img src="/public/img/people/andreas_geiger.jpg" class="image">
+                    </div>
+                    <div class="fl">
+                        <p class="name">Geiger, Andreas</p>
+                        <p class="from">MPI/ETH-Zurich</p>
+                    </div>
+                </div>
+                <div class="cb mb70"></div>
+                <div class="item">
+                    <div class="fl">
+                        <img src="/public/img/people/andreas_geiger.jpg" class="image">
+                    </div>
+                    <div class="fl">
+                        <p class="name">Geiger, Andreas</p>
+                        <p class="from">MPI/ETH-Zurich</p>
+                    </div>
+                </div>
+                <div class="cb mb70"></div>
+                <div class="item">
+                    <div class="fl">
+                        <img src="/public/img/people/andreas_geiger.jpg" class="image">
+                    </div>
+                    <div class="fl">
+                        <p class="name">Geiger, Andreas</p>
+                        <p class="from">MPI/ETH-Zurich</p>
+                    </div>
+                </div>
+                <div class="cb mb70"></div>
+                <div class="item">
+                    <div class="fl">
+                        <img src="/public/img/people/andreas_geiger.jpg" class="image">
+                    </div>
+                    <div class="fl">
+                        <p class="name">Geiger, Andreas</p>
+                        <p class="from">MPI/ETH-Zurich</p>
+                    </div>
+                </div>
+                <div class="cb mb70"></div>
+                <div class="item">
+                    <div class="fl">
+                        <img src="/public/img/people/andreas_geiger.jpg" class="image">
+                    </div>
+                    <div class="fl">
+                        <p class="name">Geiger, Andreas</p>
+                        <p class="from">MPI/ETH-Zurich</p>
+                    </div>
+                </div>
+                <div class="cb mb70"></div>
+            </div>
+            <div class="mb90"></div>
+            -->
+        </div>
+        <div class="mobile-update-log" id="mobile-update-log">
+            <!-- <div class="title">更新日志</div>
+            <div class="mobile-update-log-itme">
+                <div class="mobile-title-2">场景解析</div>
+                <ul>
+                    <li>
+                        2018.03.08  正式发布了数据集第一部分，包含74555帧视频图像序列及对应的逐像素标注和姿态文件
+                    </li>
+                    <li>
+                        2018.03.21  首次开放深度图像，更新了数据集43592帧静态背景深度图像（Road01_ins_depth和Road02_ins_depth）
+                    </li>
+                    <li>
+                        2018.03.29  补充深度图像，更新了数据集30963帧静态背景深度图像（Road03_ins_depth和Road04_ins_depth）
+                    </li>
+                </ul>
+            </div> -->
+        </div>
+    </section>
+
+    <script type="text/javascript" src="/public/third_party/swiper/swiper.min.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

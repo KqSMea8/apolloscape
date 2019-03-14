@@ -1,0 +1,208 @@
+/* csshint-disable */
+.banner {
+    background: #000 center center url(/public/img/talk/banner.png) no-repeat;
+}
+.banner:after {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.banner-inner {
+    height: 438px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+}
+.ban-title {
+    line-height: 48px;
+    font-size: 48px;
+    padding-top: 144px;
+    z-index: 10;
+    font-weight: 400;
+}
+.ban-brief {
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 10;
+    margin-top: 53px;
+}
+.ban-brief > p {
+    font-size: 16px;
+}
+
+.rank-table {
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid #e6ecf3;
+}
+
+.rank-head {
+    width: 855px;
+}
+
+.rank-head-tr {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.rank-th {
+    display: inline-block;
+    text-align: center;
+    width: 425px;
+    height: 67px;
+    line-height: 67px;
+}
+
+.rank-table-body .rank-tr:nth-of-type(even) {
+    background-color: #f5f6f8;
+}
+
+.rank-table-body .rank-td {
+    display: inline-block;
+    text-align: center;
+    width: 422px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-td + .rank-td {
+    border-left: 1px solid #e6ecf3;
+}
+
+.rank-table-body .activity .title {
+    font-size: 14px;
+    color: #333;
+}
+
+.rank-table-body .activity .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 26px;
+}
+
+.stripe {
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    padding-left: 20px;
+}
+
+.activity-list .activity-item .date {
+    display: inline-block;
+    vertical-align: top;
+    width: 90px;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+}
+.activity-list .activity-item .content {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    padding-left: 40px;
+}
+
+.activity-list .activity-item .content .title {
+    padding-bottom: 10px;
+}
+
+.activity-list .activity-item .title {
+    margin-top: -4px;
+    font-size: 20px;
+    color: #333;
+}
+.activity-list .activity-item .detail {
+    color: #666666;
+    font-size: 18px;
+    margin-top: -4px;
+}
+.activity-list .activity-item .detail ul {
+    padding-left: 20px;
+}
+.activity-list .activity-item .detail li {
+    list-style-type: disc;
+}
+
+.activity-list .activity-item .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 26px;
+}
+
+.activity-list h4 {
+    margin-bottom: 20px;
+    width: 40%;
+    text-align: center;
+}
+
+.activity-item + .activity-item {
+    margin-top: 27px;
+}
+
+
+.timeline-list .activity-item {
+    position: relative;
+}
+.timeline-list .timeline {
+    position: absolute;
+    top: 4px;
+    left: 100px;
+    height: 100%;
+}
+.timeline-list .timeline .timeline-item-head {
+    font-size: 18px;
+    height: 18px;
+    line-height: 7px;
+}
+.timeline-list .timeline .timeline-item-tail {
+    height: 100%;
+    border-left: 2px solid #e8e8e8;
+    position: absolute;
+    left: 4px;
+}
+
+.talk-item .talk-image {
+    display: inline-block;
+    width: 120px;
+    height: 164px;
+    vertical-align: top;
+}
+.talk-image img {
+    width: 120px;
+    height: 164px;
+}
+
+.talk-item + .talk-item {
+    margin-top: 40px;
+}
+
+.talk-item .talk-content {
+    display: inline-block;
+    width: 705px;
+    margin-left: 20px;
+}
+.talk-content .author {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.institution {
+    padding-top: 10px;
+    padding-bottom: 20px;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.talk-content .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+}
+.talk-item:target {
+    padding-top: 100px;
+}
+

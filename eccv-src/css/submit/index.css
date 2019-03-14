@@ -1,0 +1,89 @@
+.paper-item img {
+    display: inline-block;
+    vertical-align: top;
+}
+.paper-item .paper-content {
+    display: inline-block;
+    width: 715px;
+    margin-left: 16px;
+}
+.paper-item .paper-content .title {
+    font-size: 20px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.paper-item .paper-content .date {
+    padding: 20px 0 10px 0;
+    font-size: 16px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 16px;
+}
+
+.paper-item .paper-content .text {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+}
+
+.paper-item + .paper-item {
+    margin-top: 40px;
+}
+
+.submission-btn-group {
+    margin-top: 40px;
+}
+.submission-btn-group .submission-btn {
+    display: inline-block;
+    width: 120px;
+    border: 1px solid #006AFF;
+    text-align: center;
+    padding: 6px 34px;
+    font-size: 14px;
+    color: #006AFF;
+}
+.submission-btn + .submission-btn {
+    margin-left: 40px;
+}
+.must-start {
+    color: #f14845;
+}
+
+.file-upload {
+    margin-bottom: 10px;
+}
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+}
+.file-display {
+    margin: 20px 0;
+}
+.file-name {
+    width: 100px;
+}
+.submit-achievement {
+    text-align: center;
+}
+.submit-btn {
+    visibility: hidden;
+}
+.submit-alert {
+    visibility: hidden;
+}

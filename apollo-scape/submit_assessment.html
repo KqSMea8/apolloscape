@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="/common/meta.html?__inline">
+    <link rel="import" href="/common/css.html?__inline">
+    <link rel="import" href="/common/js.html?__inline">
+
+    <link rel="stylesheet" href="/js/lib/element-ui.min.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="/css/scene/scene.css">
+    <script src="/js/lib/element-ui.min.js"></script>
+    <script src="/js/lib/bce-bos-uploader-lite.min.js"></script>
+</head>
+
+<body>
+    <link rel="import" href="/common/header.html?__inline">
+
+    <section class="banner main-wrapper scene-banner" id="banner-container"></div>
+        <!--
+        <div class="main banner-inner tl">
+            <p class="ban-title-one">ApolloScape场景解析数据集</p>
+            <div class="ban-brief">
+                <p>CVPR2018 Workshop on autonomous driving</p>
+                <p>Autonomous driving is becoming the most attractive application of computer vision, </p>
+                <p>with a huge market and a high demand for robust and distributable algorithms. </p>
+            </div>
+            <p class="ban-brief-hr"  id="to_intro_href"></p>
+        </div>
+        -->
+    </section>
+    
+    <section class="main-wrapper">
+        <div class="main scene-body" id="app_container" v-cloak>
+            <div class="menu fl">
+                <ul>
+                    <li class v-for="item in menu" :id="item.id" :class="item.classes" v-html="item.word">
+                    </li>
+                </ul>
+            </div>
+            <div class="content fl">
+                <p class="title-1 mt60" id="to_data_href">{{$t('text3')}}</p>
+                <p class="word-1 mt20">{{$t('text4')}}</p>
+                <br>
+                <p class="word-1">{{$t('text5')}}</p>
+                <br>
+                <p class="word-1">
+                    {{$t('text6')}}<br>
+                    {{$t('text7')}}
+                </p>
+                <br>
+                <p class="title-1 mt60" id="to_category_href">{{$t('text8')}}</p>
+                <p class="word-1 mt20">{{$t('text9')}}
+                </p>
+                <p class="title-1 mt60" id="to_define_href">{{$t('text10')}}</p>
+                <p class="word-1 mt20">{{$t('text11')}}
+                </p>
+                <p class="mt20 title-2">{{$t('text12')}} <span class="required">*</span></p>
+                <el-form class="mt20" :model="form" :rules="rules" ref="formTask">
+                    <el-form-item prop="task_id">
+                        <el-radio-group v-model="form.task_id">
+                            <el-radio class="mt10" label="1">{{$t('text14')}}</el-radio>
+                            <br>
+                            <el-radio class="mt10" label="2">{{$t('text15')}}</el-radio>
+                        </el-radio-group>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text16')}} <span class="required">*</span></p>
+                <el-form class="mt20" :rules="rules" ref="formMethod" :model="form">
+                    <el-form-item prop="method_name">
+                        <el-input v-model="form.method_name" :placeholder="$t('text46')"></el-input>
+                    </el-form-item>
+                    <el-form-item prop="method_desc">
+                        <el-input type="textarea" v-model="form.method_desc" :placeholder="$t('text47')"></el-input>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text18')}}</p>
+                <p class="word-1 mt20">{{$t('text19')}}</p>
+                <el-form class="mt20" ref="form" :model="form">
+                    <el-form-item>
+                        <el-input v-model="form.sys_setup" :placeholder="$t('text48')"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input v-model="form.sub_factor" :placeholder="$t('text49')"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input v-model="form.infer_time" :placeholder="$t('text50')"></el-input>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text20')}}</p>
+                <p class="word-1 mt20">{{$t('text21')}}</p>
+                <el-form class="mt20" ref="form" :model="form">
+                    <el-form-item>
+                        <el-input v-model="form.pub_title" :placeholder="$t('text51')"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input v-model="form.pub_authors" :placeholder="$t('text52')"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input v-model="form.pub_venue" :placeholder="$t('text53')"></el-input>
+                    </el-form-item>
+                    <el-form-item>
+                        <el-input v-model="form.pub_link" :placeholder="$t('text54')"></el-input>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text22')}}</p>
+                <p class="word-1 mt20">{{$t('text23')}}</p>
+                <el-form class="mt20" ref="form" :model="form">
+                    <el-form-item>
+                        <el-input v-model="form.project_page" :placeholder="$t('text55')"></el-input>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text24')}}</p>
+                <p class="word-1 mt20">{{$t('text25')}}</p>
+                <el-form class="mt20" ref="form" :model="form">
+                    <el-form-item>
+                        <el-input v-model="form.mechanism" :placeholder="$t('text56')"></el-input>
+                    </el-form-item>
+                </el-form>
+                <p class="mt20 title-2">{{$t('text26')}}</p>
+                <p class="word-1 mt20">
+                    {{$t('text27')}}<br>
+                    {{$t('text28')}}<br>
+                    {{$t('text29')}}<br>
+                    {{$t('text30')}}
+                </p>
+                <p class="word-1 mt20">
+                    {{$t('text31')}}<br>
+                    {{$t('text32')}}<br>
+                    {{$t('text33')}}<br>
+                    …
+                </p>
+                <p class="word-1 mt20">
+                    {{$t('text35')}}
+                </p>
+                <p class="word-1 mt20">
+                    {{$t('text36')}}
+                </p>
+                <div class="mt20">
+                    <el-button id="upload_button" class="ap-upload-button" size="large" type="primary" >{{$t('upload.button')}}</el-button>
+                    &nbsp;&nbsp;
+                    <span v-if="uploadConf.speed">{{ $t('upload.upload_speed')}}：{{uploadConf.speed}}</span>
+                    &nbsp;
+                    <span v-if="uploadConf.leftTime">{{ $t('upload.upload_left_time')}}：{{uploadConf.leftTime}}</span>
+                    <span class="ap-upload-err" v-if="uploadConf.sizeError">{{ $t('upload_size_error')}}</span>
+                    <div class="mt10" v-html="uploadConf.fileList"></div>
+                    <div class="mt10" v-if="uploadConf.speed">
+                        <el-progress :percentage="uploadConf.uploadeProgress" v-show="uploadConf.isShow"></el-progress>
+                    </div>
+                    <div>
+                        <span class="ap-upload-err" v-if="uploadConf.error">{{ $t('upload.upload_failed')}}</span>
+                        <span class="ap-upload-err" v-show="uploadConf.format">{{ $t('upload.upload_error')}}</span>
+                    </div>
+                    <p class="mt20 title-2">{{$t('text39')}}</p>
+                    <p class="word-1 mt20">
+                    {{$t('text40')}} <a href="javascript:void(0)" v-on:click="openPolicy">{{$t('text42')}}</a>, {{$t('text41')}}
+                    </p>
+                    <el-form class="mt10">
+                        <el-form-item>
+                            <el-checkbox v-model="form.is_acceding">{{$t('text43')}}</el-checkbox>
+                        </el-form-item>
+                    </el-form>
+                    <div class="mt20">
+                        <el-button class="ap-upload-button" size="large" type="primary" v-on:click="submit" :disabled="form.submit_allow == 1">{{$t('text44')}}</el-button>
+                    </div>
+                    <div class="mt10 ap-upload-err" v-show="!isPassed">
+                        {{$t('text45')}}
+                    </div>
+                </div>
+            </div>
+            <div class="cb"></div>
+        </div>
+    </section>
+    <div class="protocol-bg" id="protocol"></div>
+    <div class="protocol_container" id="protocol_container">
+        <!--
+        <div class="content">
+            <div class="title">
+                <span>开发者协议</span>
+                <a id="close_protocol" class="fr"></a>
+            </div>
+            <div class="cb"></div>
+            <div class="protocol_text">
+                <p>本《开发者协议》（“本协议”）适用于您（“开发者”）对百度及其关联方（“我方”）网站、产品、服务、应用及开放存取数据集（合称“服务”）的访问及使用。请仔细阅读本协议，若开发者对本协议有任何疑问，请与我方联系。若开发者采取任何方式访问或使用服务，则表示开发者同意受本协议约束：</p>
+                <p>This Developer Agreement (this “Agreement”) governs your (“Developer”) access to and use of the websites, products, services, applications and open-access data sets (collectively, the “Service”) of Baidu and its affiliates (“we,” “us” or “ours”). Please read this Agreement carefully, and contact us if the Developer has any questions regarding this Agreement. Any access to or use of the Services indicates that the Developer agrees to be bound by this Agreement.</p>
+                <p>&nbsp;</p>
+                <p>1 开发者的一般义务 </p>
+                <p>1 General Obligations of the Develope</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+                <p>&nbsp;</p>
+                <p>1.1 若开发者代表某一实体（例如其雇主）签订本协议，则开发者声明其具有使本协议对该实体产生约束力的法律权限。若开发者在访问或使用服务的相关事项中使用某一公司或某一组织的名称，则他/她将被视为代表该公司或组织签订本协议。</p>
+                <p>1.1 If the Developer enters into this Agreement on behalf of an entity, such as his/her employer, then the Developer shall represent that he/she has the legal authority to cause this Agreement to bind such entity. If the Developer specifies a company or organization name in connection with access to or use of the Services, he/she will be deemed to have entered into this Agreement on behalf of such company or organization.</p>
+            </div>
+            <div class="hr"></div>
+            <a class="agree_btn agree_btn_no fl">我已阅读并同意上述条款与条件</a>
+            <a class="submit_btn fr">确认</a>
+        </div>
+        -->
+        
+    </div>
+    <div class="done_load"></div>
+    <script type="text/javascript" src="/js/submit_assessment.js"></script>
+
+    <link rel="import" href="/common/footer.html?__inline">
+</body>
+</html>

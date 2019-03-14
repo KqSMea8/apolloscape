@@ -1,0 +1,29 @@
+.news-list .new-item {
+    display: none;
+}
+
+.news-list .new-item .title {
+    font-size: 30px;
+    color: #333;
+    line-height: 40px;
+}
+
+.news-list .new-item .time {
+    opacity: 0.6;
+    font-size: 16px;
+    color: #333;
+    letter-spacing: 0;
+    margin: 20px 0 40px 0;
+}
+
+.news-list .new-item .content p {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+    margin-bottom: 40px;
+}
+
+.news-list .new-item .content img {
+    width: 100%;
+    margin-bottom: 40px;
+}

@@ -1,0 +1,260 @@
+.home-wrapper {
+    text-align: center;
+}
+.banner {
+    background: #000 center center url(/public/img/index/banner.png) no-repeat;
+}
+.ban-title-one {
+    padding-bottom: 10px;
+    font-size: 50px;
+}
+
+.banner:after {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.banner-inner {
+    height: 438px;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+}
+.ban-title {
+    line-height: 48px;
+    font-size: 48px;
+    padding-top: 144px;
+    z-index: 10;
+    font-weight: 400;
+}
+.ban-brief {
+    font-size: 16px;
+    line-height: 24px;
+    z-index: 10;
+    margin-top: 53px;
+}
+.ban-brief > p {
+    font-size: 16px;
+}
+
+.left-content-item .title {
+    font-size: 30px;
+    color: #333;
+    line-height: 30px;
+    text-align: left;
+}
+.left-content-item .content {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+    text-align: left;
+}
+.left-content-item .challenge {
+    margin-top: 20px;
+}
+.challenge-item + .challenge-item {
+    margin-top: 20px;
+}
+.challenge-title {
+    color: #333;
+}
+.left-content-item + .left-content-item {
+    margin-top: 80px;
+}
+.left-content-item .title {
+    padding-bottom: 40px;
+}
+.schedule-wrapper {
+    position: relative;
+}
+.schedule-list {
+    position: relative;
+    display: inline-block;
+    width: 1180px;
+    height: 90px;
+}
+
+.end-slider {
+    position: absolute;
+    width: 66px;
+    height: 2px;
+    background-color: #9E9E9E;
+}
+.first-end-slider {
+    top: 46px;
+    left: 0px;
+}
+.second-end-slider {
+    top: 46px;
+    right: 0px;
+}
+
+.schedule-list .schedule-item {
+    display: inline-block;
+    width: 140px;
+}
+
+.schedule-item + .schedule-item {
+    margin-left: 30px;
+}
+
+.schedule-list .slider-space {
+    position: absolute;
+    top: 28px;
+    left: 20px;
+    display: inline-block;
+    width: 140px;
+    height: 2px;
+    margin-top: -24px;
+    background-color: #9E9E9E;
+}
+
+.schedule-item .date {
+    font-size: 18px;
+    color: #333;
+    padding-bottom: 15px;
+}
+.schedule-item .point {
+    position: relative;
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: transparent;
+    border: 1px solid #000000;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.schedule-item .step {
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+
+.partener-list {
+    text-align: left;
+}
+.partener-list .partener-item {
+    display: inline-block;
+    width: 235px;
+}
+
+.partener-item:nth-of-type(2) {
+    margin-left: 140px;
+}
+.partener-item:nth-of-type(3) {
+    margin-left: 50px;
+}
+.partener-item:nth-of-type(4) {
+    margin-left: 50px;
+}
+
+.partener-image {
+    display: inline-block;
+    width: 235px;
+    height: 42px;
+}
+.berkeley-item {
+    margin-left: 80px;
+}
+.news-wrapper {
+    width: 100%;
+    margin-top: 107px;
+    padding: 60px 0;
+    background-color: #000;
+    text-align: center;
+}
+.news-wrapper .news {
+    display: inline-block;
+    width: 1180px;
+}
+.news-image {
+    display: inline-block;
+}
+.news-content {
+    display: inline-block;
+    width: 472px;
+    padding-left: 38px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.news-image img {
+    display: inline-block;
+    width: 667px;
+    height: 290px;
+}
+.news-content .title {
+    font-size: 30px;
+    padding-bottom: 40px;
+    color: #fff;
+    line-height: 30px;
+}
+.news-content .news-date {
+    font-size: 16px;
+    color: #999;
+    line-height: 30px;
+}
+.news-content .news-text {
+    font-size: 16px;
+    color: #2A2A2A;
+    line-height: 30px;
+}
+.footer {
+    margin-top: 0;
+}
+.stripe {
+    margin-left: 20px;
+}
+
+.rank-table {
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid #e6ecf3;
+}
+
+.rank-head-tr {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.rank-th {
+    display: inline-block;
+    text-align: center;
+    width: 580px;
+    height: 67px;
+    line-height: 67px;
+}
+
+.rank-table-body {
+    font-size: 14px;
+}
+.rank-table-body .rank-tr:nth-of-type(even) {
+    background-color: #f5f6f8;
+}
+
+.rank-table-body .rank-td {
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    height: 67px;
+    line-height: 67px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.rank-td-last {
+    width: 1180px;
+}
+
+.rank-td + .rank-td {
+    border-left: 1px solid #e6ecf3;
+}
+.new-icon {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    vertical-align: top;
+    padding-right: 15px;
+}

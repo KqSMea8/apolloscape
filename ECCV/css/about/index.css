@@ -1,0 +1,22 @@
+.photo-list + .photo-list {
+    margin-top: 10px;
+}
+
+.photo-item {
+    display: inline-block;
+    width: 258px;
+    height: 145px;
+}
+
+.photo-item + .photo-item {
+    margin-left: 40px;
+}
+
+.photo-text {
+    font-size: 14px;
+    color: #999;
+    letter-spacing: 0;
+    line-height: 26px;
+    text-align: center;
+    padding-top: 10px;
+}

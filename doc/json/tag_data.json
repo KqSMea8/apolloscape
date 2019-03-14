@@ -1,0 +1,74 @@
+{
+    "lidar_obstacle_label": {
+        "title": "text_lidar_obstacle_label_title",
+        "intro": "text_lidar_obstacle_label_intro",
+        "link": "data_intro_3d",
+        "size": "121MB",
+        "image": "/static/images/3@2x.png",
+        "image_g": "/static/images/lidar_obstacle_label.gif",
+        "download": "annotation-lidar_obstacle_label-data-apollo-1.0.tar.gz",
+        "button": "button",
+        "show_type": "3d_obstacle",
+        "state": "10"
+    },
+    "traffic_light_label": {
+        "title": "text_traffic_light_label_title",
+        "intro": "text_traffic_light_label_intro",
+        "link": "data_intro_2d",
+        "size": "88.1MB",
+        "image": "/static/images/4@2x.png",
+        "image_g": "/static/images/traffic_light_label.gif",
+        "download": "annotation-traffic_light_label-data-apollo-1.0.tar.gz",
+        "button": "button",
+        "show_type": "traffic_light",
+        "state": "10"
+    },
+    "road_hackers": {
+        "title": "text_road_hackers_title",
+        "intro": "text_road_hackers_intro",
+        "link": "data_intro_roadhacker",
+        "size": "6.6GB",
+        "image": "/static/images/5@2x.png",
+        "image_g": "/static/images/road_hackers.gif",
+        "download": "annotation-road_hackers-data-apollo-1.0.tar.gz",
+        "button": "button",
+        "show_type": "road_hackers",
+        "state": "10"
+    },
+    "2d_obstacle_label": {
+        "title": "text_2d_obstacle_label_title",
+        "intro": "text_2d_obstacle_label_intro",
+        "link": "data-2d-obstacle-intro",
+        "size": "108MB",
+        "image": "/static/images/6@2x.png",
+        "image_g": "/static/images/2d_obstacle_label.gif",
+        "download": "annotation-2d_obstacle_label-data-apollo-2.0.tar.gz",
+        "button": "button",
+        "show_type": "2d_perception",
+        "state": "10"
+    },
+    "prediction_label": {
+        "title": "text_prediction_label_title",
+        "intro": "text_prediction_label_intro",
+        "link": "data_intro_pnc",
+        "size": "27KB",
+        "image": "/static/images/7@2x.png",
+        "image_g": "/static/images/prediction_label.gif",
+        "download": "annotation-prediction_label-data-apollo-2.0.h5",
+        "button": "button",
+        "show_type": "obstacle_prediction",
+        "state": "10"
+    },
+    "apollo_scape_label": {
+        "title": "text_apollo_scape_label_title",
+        "intro": "text_apollo_scape_label_intro",
+        "link": "data_intro_scene",
+        "size": "109.7GB",
+        "image": "/static/images/8@2x.png",
+        "image_g": "/static/images/apollo_scape_label.gif",
+        "download": "scene",
+        "button": "button",
+        "show_type": "apollo_scape",
+        "state": "10"
+    }
+}

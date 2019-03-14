@@ -1,0 +1,92 @@
+.rank-table {
+    text-align: center;
+    margin-top: 30px;
+    border: 1px solid #e6ecf3;
+}
+
+.rank-head-tr {
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 0;
+}
+
+.rank-th {
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    height: 67px;
+    line-height: 67px;
+}
+
+.rank-table-body .rank-tr:nth-of-type(even) {
+    background-color: #f5f6f8;
+}
+
+.rank-table-body .rank-td {
+    display: inline-block;
+    text-align: center;
+    width: 280px;
+    height: 67px;
+    line-height: 67px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.rank-td + .rank-td {
+    border-left: 1px solid #e6ecf3;
+}
+.task-item {
+    display: inline-block;
+    width: 1180px;
+}
+.task-item-left {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    height: 219px;
+}
+.task-item-right {
+    display: inline-block;
+    vertical-align: top;
+    padding: 35px 20px;
+    width: 740px;
+    min-height: 150px;
+    background: #F5F6F8;
+}
+
+.task-title {
+    font-size: 24px;
+    color: #006AFF;
+    letter-spacing: 0;
+    line-height: 26px;
+}
+.task-text {
+    padding-top: 21px;
+    font-size: 16px;
+    color: #999999;
+    line-height: 30px;
+}
+
+.task-item + .task-item {
+    margin-top: 30px;
+}
+.task-submission-btn {
+    display: inline-block;
+    width: 100px;
+    border: 1px solid #006AFF;
+    text-align: center;
+    margin-top: 20px;
+    padding: 6px 34px;
+    font-size: 14px;
+    color: #006AFF;
+}
+.task-btn-disable {
+    cursor: default;
+    color: #999;
+    border-color: #999;
+}
+.task-btn-disable:hover {
+    color: #999;
+}

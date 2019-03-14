@@ -1,0 +1,172 @@
+<!-- htmlcs-disable  -->
+<!DOCTYPE html>
+<!--[if lt IE 9]><html class="ie"><![endif]-->
+<html lang="en">
+<head>
+    <link rel="import" href="common/meta.html?__inline">
+    <link rel="import" href="common/css.html?__inline">
+    <link rel="stylesheet" type="text/css" href="common/bootstrap/bootstrap.css">
+
+    <link rel="stylesheet" type="text/css" media="screen and (min-width: 750px)" href="css/car/index.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width: 750px)" href="css/car/m-index.css">
+</head>
+
+<body>
+    <link rel="import" href="common/header.html?__inline">
+
+    <section class="main-wrapper">
+        <div class="main">
+            <div class="left-content-wrapper">
+
+                <div class="left-content-item">
+                    <h3>Leaderboard <span class="head-text-small">3D Car Instance</span></h3>
+
+                </div>
+
+                <div class="left-content-item">
+                    <div class="schedule-wrapper" id="car">
+                        <div class="rank-table-wrapper">
+                            <div class="rank-table global-rank">
+                                <div class="rank-head">
+                                    <div class="rank-head-tr">
+                                        <div class="rank-th rank-th-lane-small">
+                                            Rank
+                                        </div>
+                                        <div class="rank-th rank-th-lane-large">
+                                            Method
+                                        </div>
+                                        <div class="rank-th rank-th-lane red">
+                                            AP
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AP<sup>50</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AP<sup>75</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AP<sup>S</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AP<sup>M</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AP<sup>L</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>1</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>10</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>100</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>S</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>M</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane">
+                                            AR<sup>L</sup>
+                                        </div>
+                                        <div class="rank-th rank-th-lane-middle">
+                                            Date
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rank-table-body car-body">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <link rel="import" href="common/right-menu.html?__inline">
+        </div>
+    </section>
+
+    <link rel="import" href="common/footer.html?__inline">
+</body>
+<script type="text/javascript" src="js/lib/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="common/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript">
+    /* eslint-disable */
+    $.getJSON("/server/eccv/leaderboard/?taskId=car-instance",function(result){
+        console.log('a');
+        var carInstance = result.data['car-instance'];
+
+        $.each(carInstance, function (c, carAchievement) {
+            if (carAchievement.result) {
+                var iou = $.parseJSON(carAchievement.result);
+                var score = iou.score;
+                var detail = iou.record;
+            }
+
+            var carTrH = '<div class="rank-tr" id="car-' + c + '">';
+            if (carAchievement.status === "3") {
+                var carTr  = '<div class="rank-td rank-td-lane-small">' + carAchievement.rank + '</div>' +
+                    '<div class="rank-td rank-td-lane-large">' + carAchievement.method_name + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + score + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AP_c0 + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AP_c3 + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_s + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AP_m + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AP_l + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_1 + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_10 + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_100 + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_s + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_m + '</div>' +
+                    '<div class="rank-td rank-td-lane">' + detail.AR_l + '</div>' +
+                    '<div class="rank-td rank-td-lane-middle">' + carAchievement.created_at.split(" ",1)+ '</div>';
+            }
+            if (carAchievement.status === "0" || carAchievement.status === "2") {
+                var carTr  = '<div class="rank-td rank-td-lane-small">-</div>' +
+                    '<div class="rank-td rank-td-lane">' + carAchievement.method_name + '</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane">-</div>' +
+                    '<div class="rank-td rank-td-lane-large">' + carAchievement.created_at.split(" ",1) + '</div>';
+            }
+            if (carAchievement.status === "1") {
+                var carTr  = '<div class="rank-td rank-td-lane-small fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane">' + carAchievement.method_name + '</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane fail-text">fail</div>' +
+                    '<div class="rank-td rank-td-lane-large">' + carAchievement.created_at.split(" ",1) + '</div>';
+            }
+            var carTrT = '</div>';
+
+            var carHtml = carTrH + carTr + carTrT;
+            $(".car-body").append(carHtml);
+        });
+
+    });
+
+
+</script>
+</html>
